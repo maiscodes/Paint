@@ -27,7 +27,7 @@ public class PaintPlot extends Shape {
         Double x = Double.valueOf(x_coord.get(0))/canvas_px;
         Double y =  Double.valueOf(y_coord.get(0))/canvas_px;
         String instruction = String.format("PLOT %.2f %.2f",x ,y );
-        System.out.print(instruction);
+        System.out.println(instruction);
         return instruction;
     }
 }
