@@ -1,23 +1,16 @@
 package paint;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.event.EventHandler;
 
 
-import javafx.application.Application;
 import javafx.collections.FXCollections;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -57,15 +50,22 @@ public class Main extends Application {
         ObservableList menuButtons = menu_container.getChildren();
         menuButtons.addAll(menu_lbl, open_btn, save_btn, new_btn);
 
+        // create canvas, coordinates works from top left
+        PaintCanvas canvas = new PaintCanvas(500);
+        //make it white for now
+        GraphicsContext gc = canvas.getGraphicsContext();
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0, 0, 400, 400);
+
         //create tool buttons pane
         HBox drawingtools_container = new HBox();
 
         // create the buttons
-        Button line_btn = new Button("LINE");
-        Button plot_btn = new Button("PLOT");
-        Button rect_btn = new Button("RECT");
-        Button ellipse_btn = new Button("ELLIPSE");
-        Button polygon_btn = new Button("POLYGON");
+        Button line_btn = new PaintButton(ShapeType.LINE, canvas);
+        Button plot_btn = new PaintButton(ShapeType.PLOT, canvas);
+        Button rect_btn = new PaintButton(ShapeType.RECTANGLE, canvas);
+        Button ellipse_btn = new PaintButton(ShapeType.ELLIPSE, canvas);
+        Button polygon_btn = new PaintButton(ShapeType.POLYGON, canvas);
 
         // add the buttons in two columns
         VBox toolbar_c1 = new VBox();
@@ -83,7 +83,7 @@ public class Main extends Application {
         // create the colour tools container, can create function to return based on name
         VBox pencolour_container = new VBox();
         Label pencolour_lbl = new Label("Pen Colour");
-        ColorPicker pencolour_picker = new ColorPicker();
+        ColorPicker pencolour_picker = new PenColourPicker(canvas);
 
         // add the pen colour components to the container
         ObservableList pencolours_list = pencolour_container.getChildren();
@@ -91,7 +91,7 @@ public class Main extends Application {
 
         VBox shapefill_container = new VBox();
         Label shapefill_lbl = new Label("Shape Fill Colour");
-        ColorPicker shapefill_picker = new ColorPicker();
+        ColorPicker shapefill_picker = new FillColourPicker(canvas);
         ObservableList shapefill_list = shapefill_container.getChildren();
         shapefill_list.addAll(shapefill_lbl, shapefill_picker);
 
@@ -113,12 +113,6 @@ public class Main extends Application {
         ObservableList toolbar_contents = toolbar.getChildren();
         toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container);
 
-        // create canvas, coordinates works from top left
-        PaintCanvas canvas = new PaintCanvas(500);
-        //make it white for now
-        GraphicsContext gc = canvas.getGraphicsContext();
-        gc.setFill(Color.WHITE);
-        gc.fillRect(0, 0, 400, 400);
 
 
         // testing the default shape tools provided
@@ -161,7 +155,7 @@ public class Main extends Application {
 
         //test ellipse
         SetFill fill3 = new SetFill(Color.ORANGE);
-        SetStroke stroke1 = new SetStroke(Color.PURPLE);
+        SetPen stroke1 = new SetPen(Color.PURPLE);
         Shape testEllipse = new PaintEllipse();
         testEllipse.addXCoord(100);
         testEllipse.addYCoord(50);
@@ -171,7 +165,7 @@ public class Main extends Application {
 
         //test Polygon
         SetFill fill4 = new SetFill(Color.GREEN);
-        SetStroke stroke2 = new SetStroke(Color.RED);
+        SetPen stroke2 = new SetPen(Color.RED);
         Shape testPolygon = new PaintPolygon();
         testPolygon.addXCoord(100);
         testPolygon.addYCoord(300);
@@ -208,6 +202,8 @@ public class Main extends Application {
             actions.get(a).draw(gc);
             actions.get(a).printInstruction();
         }
+
+
 
 
         //rectangle

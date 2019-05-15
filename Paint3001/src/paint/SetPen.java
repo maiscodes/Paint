@@ -3,10 +3,10 @@ package paint;
 import javafx.scene.paint.Color;
 import javafx.scene.canvas.GraphicsContext;
 
-public class SetStroke extends Action {
+public class SetPen extends Action {
     Color stroke_colour;
 
-    public SetStroke(Color colour) {
+    public SetPen(Color colour) {
         stroke_colour = colour;
     }
 
