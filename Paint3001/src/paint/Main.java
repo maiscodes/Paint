@@ -120,33 +120,6 @@ public class Main extends Application {
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, 400, 400);
 
-//        //Canvas events
-//        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
-//                new EventHandler<MouseEvent>(){
-//
-//                    @Override
-//                    public void handle(MouseEvent event) {
-//                        System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
-//                    }
-//                });
-//
-//        canvas.addEventHandler(MouseEvent.MOUSE_DRAGGED,
-//                new EventHandler<MouseEvent>(){
-//
-//                    @Override
-//                    public void handle(MouseEvent event) {
-//                        System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
-//                    }
-//                });
-//
-//        canvas.addEventHandler(MouseEvent.MOUSE_RELEASED,
-//                new EventHandler<MouseEvent>(){
-//                    @Override
-//                    public void handle(MouseEvent event) {
-//                        System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
-//                    }
-//                });
-
 
         // testing the default shape tools provided
         gc.setFill(Color.GREEN);
