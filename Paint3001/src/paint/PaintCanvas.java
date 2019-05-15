@@ -4,8 +4,8 @@ import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 
-import javax.net.ssl.SNIHostName;
 import java.util.ArrayList;
 
 
@@ -65,6 +65,7 @@ public class PaintCanvas extends Canvas {
 
                             rect.draw(gc);
                         }
+                        redraw();
                     }
                 });
 
@@ -73,6 +74,15 @@ public class PaintCanvas extends Canvas {
                     @Override
                     public void handle(MouseEvent event) {
                         System.out.println("X: " + event.getX() + "\nY: " + event.getY());
+                        if(shapeType == ShapeType.RECTANGLE){
+                            Shape rect = (Shape) actions.get(actions.size() - 1);
+
+                            rect.setX2Coord(event.getX());
+                            rect.setY2Coord(event.getY());
+
+                            actions.set(actions.size() - 1, rect);
+                        }
+                        redraw();
                     }
                 });
     }
@@ -87,6 +97,18 @@ public class PaintCanvas extends Canvas {
 
     public void setShapeType(ShapeType shapeType) {
         this.shapeType = shapeType;
+    }
+
+    private void redraw(){
+        gc.clearRect(0,0, this.getWidth(), this.getHeight());
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0, 0, 400, 400);
+
+        gc.setFill(Color.GREEN);
+
+        for(int index = 0; index < actions.size(); index++){
+            actions.get(index).draw(gc);
+        }
     }
 }
 

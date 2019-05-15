@@ -114,7 +114,7 @@ public class Main extends Application {
         toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container);
 
         // create canvas, coordinates works from top left
-        PaintCanvas canvas = new PaintCanvas(400);
+        PaintCanvas canvas = new PaintCanvas(500);
         //make it white for now
         GraphicsContext gc = canvas.getGraphicsContext();
         gc.setFill(Color.WHITE);
