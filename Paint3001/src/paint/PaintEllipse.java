@@ -9,10 +9,10 @@ public class PaintEllipse extends Shape {
     }
 
     public void draw(GraphicsContext gc){
-        Integer x = x_coord.get(0);
-        Integer y = y_coord.get(0);
-        Integer w = x_coord.get(1) - x; //width at center of the oval
-        Integer h = y_coord.get(1) - y;
+        double x = x_coord.get(0);
+        double y = y_coord.get(0);
+        double w = x_coord.get(1) - x; //width at center of the oval
+        double h = y_coord.get(1) - y;
         //gc.fillRect(x, y, w, h); nope this line of code doesnt work if trans
         if (gc.getFill() == Color.TRANSPARENT) {
             gc.strokeOval(x, y, w, h);

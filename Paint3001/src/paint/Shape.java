@@ -8,8 +8,8 @@ public abstract class Shape extends Action{
     protected ShapeType shape_type;
     //protected Color pen_colour;
     //protected Color fill_colour;
-    protected ArrayList<Integer> x_coord;
-    protected ArrayList<Integer> y_coord;
+    protected ArrayList<Double> x_coord;
+    protected ArrayList<Double> y_coord;
     //for now, have canvas px stored-  later when canvas class can get from there
     protected Integer canvas_px = 400;
 
@@ -24,20 +24,28 @@ public abstract class Shape extends Action{
     }
 
     // instead of get, have print the instructions out, abstract?
-    public ArrayList<Integer> getXCoords(){
+    public ArrayList<Double> getXCoords(){
         return x_coord;
     }
 
-    public ArrayList<Integer> getYCoords(){
+    public ArrayList<Double> getYCoords(){
         return y_coord;
     }
 
-    public void addXCoord(Integer x){
+    public void addXCoord(double x){
         x_coord.add(x);
     }
 
-    public void addYCoord(Integer y){
+    public void addYCoord(double y){
         y_coord.add(y);
+    }
+
+    public void setX2Coord(double x){
+        x_coord.set(1, x);
+    }
+
+    public void setY2Coord(double y){
+        y_coord.set(1, y);
     }
 
     //public abstract void draw(GraphicsContext gc);

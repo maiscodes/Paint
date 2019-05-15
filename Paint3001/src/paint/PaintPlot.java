@@ -19,7 +19,7 @@ public class PaintPlot extends Shape {
 
         //draw square dot
         PixelWriter pixel_writer = gc.getPixelWriter();
-        pixel_writer.setColor(x_coord.get(0), y_coord.get(0), (Color)gc.getStroke());
+        pixel_writer.setColor((int) Math.round(x_coord.get(0)), (int) Math.round(y_coord.get(0)), (Color)gc.getStroke());
 
     };
 
