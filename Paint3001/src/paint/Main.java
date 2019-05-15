@@ -1,6 +1,8 @@
 package paint;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -202,9 +204,6 @@ public class Main extends Application {
             actions.get(a).draw(gc);
             actions.get(a).printInstruction();
         }
-
-
-
 
         //rectangle
         gc.fillRect(110, 60, 30, 30);
