@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.event.EventHandler;
 
 
 import javafx.application.Application;
@@ -113,10 +115,38 @@ public class Main extends Application {
 
         // create canvas, coordinates works from top left
         Canvas canvas = new Canvas(400, 400);
+
         //make it white for now
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, 400, 400);
+
+        //Canvas events
+        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
+                new EventHandler<MouseEvent>(){
+
+                    @Override
+                    public void handle(MouseEvent event) {
+                        System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
+                    }
+                });
+
+        canvas.addEventHandler(MouseEvent.MOUSE_DRAGGED,
+                new EventHandler<MouseEvent>(){
+
+                    @Override
+                    public void handle(MouseEvent event) {
+                        System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
+                    }
+                });
+
+        canvas.addEventHandler(MouseEvent.MOUSE_RELEASED,
+                new EventHandler<MouseEvent>(){
+                    @Override
+                    public void handle(MouseEvent event) {
+                        System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
+                    }
+                });
 
 
         // testing the default shape tools provided
