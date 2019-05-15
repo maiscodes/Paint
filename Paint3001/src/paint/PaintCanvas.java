@@ -15,6 +15,8 @@ public class PaintCanvas extends Canvas {
     private GraphicsContext gc;
     private ShapeType shapeType;
     private ArrayList<Action> actions = new ArrayList<>();
+    private Color fillColour;
+    private Color penColour;
 
     public PaintCanvas(int pixels) {
         this.pixels = pixels;
@@ -22,6 +24,8 @@ public class PaintCanvas extends Canvas {
         super.setHeight(pixels);
         this.gc = this.getGraphicsContext2D();
         this.shapeType = ShapeType.LINE;
+        this.fillColour = Color.TRANSPARENT;
+        this.penColour = Color.BLACK;
 
         //Canvas events
         addEventHandler(MouseEvent.MOUSE_PRESSED,
@@ -101,6 +105,22 @@ public class PaintCanvas extends Canvas {
         this.shapeType = shapeType;
     }
 
+    public ArrayList<Action> getActions() {
+        return this.actions;
+    }
+
+    public void addToActions(Action action) {
+        actions.add(action);
+    }
+
+    public void setFillColour(Color colour){
+        this.fillColour = colour;
+    }
+
+    public void setPenColour(Color colour){
+        this.penColour = colour;
+    }
+
     private void initShape(Shape shape, double x, double y){
         shape.addXCoord(x);
         shape.addYCoord(y);
@@ -141,9 +161,9 @@ public class PaintCanvas extends Canvas {
     private void redraw(){
         gc.clearRect(0,0, this.getWidth(), this.getHeight());
         gc.setFill(Color.WHITE);
-        gc.fillRect(0, 0, 400, 400);
-
-        gc.setFill(Color.GREEN);
+        gc.fillRect(0, 0, pixels, pixels);
+        gc.setFill(Color.TRANSPARENT);
+        gc.setStroke(Color.BLACK);
 
         for(int index = 0; index < actions.size(); index++){
             actions.get(index).draw(gc);
