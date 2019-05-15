@@ -40,6 +40,14 @@ public abstract class Shape extends Action{
         y_coord.add(y);
     }
 
+    public void setX1Coord(double x){
+        x_coord.set(0, x);
+    }
+
+    public void setY1Coord(double y){
+        y_coord.set(0, y);
+    }
+
     public void setX2Coord(double x){
         x_coord.set(1, x);
     }
