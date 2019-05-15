@@ -11,10 +11,16 @@ public class PaintLine extends Shape {
     }
 
     public void draw(GraphicsContext gc){
+        double x1, x2, y1, y2;
+        x1 = x_coord.get(0);
+        x2 = x_coord.get(1);
+        y1 = y_coord.get(0);
+        y2 = y_coord.get(1);
+
         //possibly omit the SetStroke when canvas class stores the pen and fill colours
         //gc.getStroke();
-        gc.strokeLine(x_coord.get(0), y_coord.get(0), x_coord.get(1), y_coord.get(1));
-    };
+        gc.strokeLine(x1, y1, x2, y2);
+    }
 
     public String printInstruction(){
         Double X1 = Double.valueOf(x_coord.get(0))/canvas_px;

@@ -21,7 +21,7 @@ public class PaintCanvas extends Canvas {
         super.setWidth(pixels);
         super.setHeight(pixels);
         this.gc = this.getGraphicsContext2D();
-        this.shapeType = ShapeType.ELLIPSE;
+        this.shapeType = ShapeType.LINE;
 
         //Canvas events
         addEventHandler(MouseEvent.MOUSE_PRESSED,
@@ -29,35 +29,31 @@ public class PaintCanvas extends Canvas {
 
                     @Override
                     public void handle(MouseEvent event) {
+                        double x = event.getX();
+                        double y = event.getY();
+
                         System.out.println("X: " + event.getX() + "\nY: " + event.getY());
                         if(shapeType == ShapeType.PLOT){
                             Shape plot = new PaintPlot();
                             plot.addXCoord(event.getX());
                             plot.addYCoord(event.getY());
-
                             actions.add(plot);
 
                             plot.draw(gc);
                         }
                         if(shapeType == ShapeType.RECTANGLE){
                             Shape rect = new PaintRectangle();
-                            rect.addXCoord(event.getX());
-                            rect.addYCoord(event.getY());
-                            rect.addXCoord(event.getX());
-                            rect.addYCoord(event.getY());
-
-                            actions.add(rect);
+                            initShape(rect, x, y);
                         }
 
                         if(shapeType == ShapeType.ELLIPSE){
                             Shape ellipse = new PaintEllipse();
-                            //could be set X1, set X2, then for polygon special case
-                            ellipse.addXCoord(event.getX());
-                            ellipse.addYCoord(event.getY());
-                            ellipse.addXCoord(event.getX());
-                            ellipse.addYCoord(event.getY());
+                            initShape(ellipse, x, y);
+                        }
 
-                            actions.add(ellipse);
+                        if(shapeType == ShapeType.LINE){
+                            Shape line = new PaintLine();
+                            initShape(line, x, y);
                         }
                     }
                 });
@@ -67,24 +63,13 @@ public class PaintCanvas extends Canvas {
 
                     @Override
                     public void handle(MouseEvent event) {
-                        System.out.println("X: " + event.getX() + "\nY: " + event.getY());
-                        if(shapeType == ShapeType.RECTANGLE){
-                            Shape rect = (Shape) actions.get(actions.size() - 1);
+                        double x = event.getX();
+                        double y = event.getY();
 
-                            rect.setX2Coord(event.getX());
-                            rect.setY2Coord(event.getY());
-
-                            rect.draw(gc);
+                        if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE || shapeType == ShapeType.LINE){
+                            redrawShape(x, y);
                         }
 
-                        if(shapeType == ShapeType.ELLIPSE){
-                            Shape ellipse = (Shape) actions.get(actions.size() - 1);
-
-                            ellipse.setX2Coord(event.getX());
-                            ellipse.setY2Coord(event.getY());
-
-                            ellipse.draw(gc);
-                        }
                         redraw();
                     }
                 });
@@ -93,46 +78,12 @@ public class PaintCanvas extends Canvas {
                 new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
-                        System.out.println("X: " + event.getX() + "\nY: " + event.getY());
-                        if(shapeType == ShapeType.RECTANGLE){
-                            Shape rect = (Shape) actions.get(actions.size() - 1);
-
-                            if (event.getX() < rect.getXCoords().get(0)) {
-                                double tempX = rect.getXCoords().get(0);
-                                rect.setX1Coord(event.getX());
-                                rect.setX2Coord(tempX);
-                            }
-
-                            if (event.getY() < rect.getYCoords().get(0)) {
-                                double tempY = rect.getYCoords().get(0);
-                                rect.setY1Coord(event.getY());
-                                rect.setY2Coord(tempY);
-                            }
-
-
-                            actions.set(actions.size() - 1, rect);
-                            rect.printInstruction();
+                        double x = event.getX();
+                        double y = event.getY();
+                        if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE){
+                            finalShape(x, y);
                         }
 
-                        if(shapeType == ShapeType.ELLIPSE){
-                            Shape ellipse = (Shape) actions.get(actions.size() - 1);
-
-                            if (event.getX() < ellipse.getXCoords().get(0)) {
-                                double tempX = ellipse.getXCoords().get(0);
-                                ellipse.setX1Coord(event.getX());
-                                ellipse.setX2Coord(tempX);
-                            }
-
-                            if (event.getY() < ellipse.getYCoords().get(0)) {
-                                double tempY = ellipse.getYCoords().get(0);
-                                ellipse.setY1Coord(event.getY());
-                                ellipse.setY2Coord(tempY);
-                            }
-
-
-                            actions.set(actions.size() - 1, ellipse);
-                            ellipse.printInstruction();
-                        }
                         redraw();
                     }
                 });
@@ -150,6 +101,43 @@ public class PaintCanvas extends Canvas {
         this.shapeType = shapeType;
     }
 
+    private void initShape(Shape shape, double x, double y){
+        shape.addXCoord(x);
+        shape.addYCoord(y);
+        shape.addXCoord(x);
+        shape.addYCoord(y);
+
+        actions.add(shape);
+    }
+
+    private void redrawShape(double x, double y){
+        Shape shape = (Shape) actions.get(actions.size() - 1);
+
+        shape.setX2Coord(x);
+        shape.setY2Coord(y);
+        shape.draw(gc);
+    }
+
+    private void finalShape(double x, double y){
+        Shape shape = (Shape) actions.get(actions.size() - 1);
+
+        if (x < shape.getXCoords().get(0)) {
+            double tempX = shape.getXCoords().get(0);
+            shape.setX1Coord(x);
+            shape.setX2Coord(tempX);
+        }
+
+        if (y < shape.getYCoords().get(0)) {
+            double tempY = shape.getYCoords().get(0);
+            shape.setY1Coord(y);
+            shape.setY2Coord(tempY);
+        }
+
+
+        actions.set(actions.size() - 1, shape);
+        shape.printInstruction();
+    }
+
     private void redraw(){
         gc.clearRect(0,0, this.getWidth(), this.getHeight());
         gc.setFill(Color.WHITE);
@@ -162,4 +150,3 @@ public class PaintCanvas extends Canvas {
         }
     }
 }
-
