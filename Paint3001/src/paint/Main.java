@@ -124,7 +124,6 @@ public class Main extends Application {
         //Canvas events
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
                 new EventHandler<MouseEvent>(){
-
                     @Override
                     public void handle(MouseEvent event) {
                         System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
@@ -133,7 +132,6 @@ public class Main extends Application {
 
         canvas.addEventHandler(MouseEvent.MOUSE_DRAGGED,
                 new EventHandler<MouseEvent>(){
-
                     @Override
                     public void handle(MouseEvent event) {
                         System.out.println("X: "+ event.getX() + "\nY: " + event.getY());
