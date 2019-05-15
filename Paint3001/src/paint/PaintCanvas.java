@@ -6,6 +6,7 @@ public class PaintCanvas extends Canvas {
 
     private int pixels;
     private GraphicsContext gc;
+    private Shape shapeType;
 
     public PaintCanvas(int pixels) {
         this.pixels = pixels;
@@ -16,6 +17,14 @@ public class PaintCanvas extends Canvas {
 
     public GraphicsContext getGraphicsContext(){
         return gc;
+    }
+
+    public void setShapeType(Shape shapeType) {
+        this.shapeType = shapeType;
+    }
+
+    public Shape getShapeType(){
+        return this.shapeType;
     }
 }
 
