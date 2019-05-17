@@ -63,9 +63,8 @@ public class Main extends Application {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(final ActionEvent e) {
+                        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
                         File file = fileChooser.showOpenDialog(stage);
-                        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("VEC files (*.vec)", "*.vec");
-                        fileChooser.getExtensionFilters().add(extFilter);
                         if (file != null) {
                             Read.read(canvas, file);
                             canvas.redraw();
