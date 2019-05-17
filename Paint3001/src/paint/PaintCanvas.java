@@ -27,9 +27,9 @@ public class PaintCanvas extends Canvas {
         this.fillColour = Color.TRANSPARENT;
         this.penColour = Color.BLACK;
 
-        Read.read(this);
+        //Read.read(this);
 
-        redraw();
+        //redraw();
 
         //Canvas events
         addEventHandler(MouseEvent.MOUSE_PRESSED,
@@ -162,7 +162,7 @@ public class PaintCanvas extends Canvas {
         shape.printInstruction();
     }
 
-    private void redraw(){
+    public void redraw(){
         gc.clearRect(0,0, this.getWidth(), this.getHeight());
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, pixels, pixels);

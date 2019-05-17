@@ -5,11 +5,12 @@ import java.io.*;
 
 public class Read{
 
-    public static void read(PaintCanvas canvas){
+    public static void read(PaintCanvas canvas, File file){
         BufferedReader reader = null;
+        double canvasSize = canvas.getHeight();
 
         try {
-            File file = new File("files/test.vec");
+            //File file = new File("files/test.vec");
             reader = new BufferedReader(new FileReader(file));
 
             String line;
@@ -17,36 +18,36 @@ public class Read{
                 String[] content = line.split(" ");
                 if(content[0].equals("RECTANGLE")){
                     Shape rectangle = new PaintRectangle();
-                    rectangle.addXCoord(Double.parseDouble(content[1]) * 500);
-                    rectangle.addYCoord(Double.parseDouble(content[2]) * 500);
-                    rectangle.addXCoord(Double.parseDouble(content[3]) * 500);
-                    rectangle.addYCoord(Double.parseDouble(content[4]) * 500);
+                    rectangle.addXCoord(Double.parseDouble(content[1]) * canvasSize);
+                    rectangle.addYCoord(Double.parseDouble(content[2]) * canvasSize);
+                    rectangle.addXCoord(Double.parseDouble(content[3]) * canvasSize);
+                    rectangle.addYCoord(Double.parseDouble(content[4]) * canvasSize);
 
                     canvas.addToActions(rectangle);
                 }
                 else if(content[0].equals("ELLIPSE")){
                     Shape ellipse = new PaintEllipse();
-                    ellipse.addXCoord(Double.parseDouble(content[1]) * 500);
-                    ellipse.addYCoord(Double.parseDouble(content[2]) * 500);
-                    ellipse.addXCoord(Double.parseDouble(content[3]) * 500);
-                    ellipse.addYCoord(Double.parseDouble(content[4]) * 500);
+                    ellipse.addXCoord(Double.parseDouble(content[1]) * canvasSize);
+                    ellipse.addYCoord(Double.parseDouble(content[2]) * canvasSize);
+                    ellipse.addXCoord(Double.parseDouble(content[3]) * canvasSize);
+                    ellipse.addYCoord(Double.parseDouble(content[4]) * canvasSize);
 
                     canvas.addToActions(ellipse);
                 }
                 else if(content[0].equals("PLOT")){
                     Shape plot = new PaintPlot();
-                    plot.addXCoord(Double.parseDouble(content[1]) * 500);
-                    plot.addYCoord(Double.parseDouble(content[2]) * 500);
+                    plot.addXCoord(Double.parseDouble(content[1]) * canvasSize);
+                    plot.addYCoord(Double.parseDouble(content[2]) * canvasSize);
                 }
                 else if(content[0].equals("POLYGON")){
 
                 }
                 else if(content[0].equals("LINE")){
                     Shape lineShape = new PaintLine();
-                    lineShape.addXCoord(Double.parseDouble(content[1]) * 500);
-                    lineShape.addYCoord(Double.parseDouble(content[2]) * 500);
-                    lineShape.addXCoord(Double.parseDouble(content[3]) * 500);
-                    lineShape.addYCoord(Double.parseDouble(content[4]) * 500);
+                    lineShape.addXCoord(Double.parseDouble(content[1]) * canvasSize);
+                    lineShape.addYCoord(Double.parseDouble(content[2]) * canvasSize);
+                    lineShape.addXCoord(Double.parseDouble(content[3]) * canvasSize);
+                    lineShape.addYCoord(Double.parseDouble(content[4]) * canvasSize);
 
                     canvas.addToActions(lineShape);
 

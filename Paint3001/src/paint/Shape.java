@@ -11,7 +11,7 @@ public abstract class Shape extends Action{
     protected ArrayList<Double> x_coord;
     protected ArrayList<Double> y_coord;
     //for now, have canvas px stored-  later when canvas class can get from there
-    protected Integer canvas_px = 400;
+    protected Integer canvas_px = 500;
 
 
     public Shape(ShapeType shape_type){

@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 
 import javafx.collections.FXCollections;
 import javafx.scene.control.Button;
@@ -21,6 +22,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.*;
 import javafx.scene.canvas.*;
 import javafx.scene.control.ListView;
+import javafx.stage.FileChooser;
 
 import java.util.ArrayList;
 //import javafx.scene.shape.Line;
@@ -41,6 +43,8 @@ public class Main extends Application {
         // create menu pane
         FlowPane menu_container = new FlowPane();
 
+        final FileChooser fileChooser = new FileChooser();
+
         //additional method to set style son!
         String style = "-fx-background-color: rgba(47, 51, 58, 0.9);";
         menu_container.setStyle(style);
@@ -54,6 +58,36 @@ public class Main extends Application {
 
         // create canvas, coordinates works from top left
         PaintCanvas canvas = new PaintCanvas(500);
+
+        open_btn.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(final ActionEvent e) {
+                        File file = fileChooser.showOpenDialog(stage);
+                        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("VEC files (*.vec)", "*.vec");
+                        fileChooser.getExtensionFilters().add(extFilter);
+                        if (file != null) {
+                            Read.read(canvas, file);
+                            canvas.redraw();
+                        }
+                    }
+                });
+
+        save_btn.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(final ActionEvent e) {
+                        FileChooser fileChooser = new FileChooser();
+                        fileChooser.setTitle("Save Drawing");
+                        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("VEC files (*.vec)", "*.vec");
+                        fileChooser.getExtensionFilters().add(extFilter);
+
+                        File file = fileChooser.showSaveDialog(stage);
+                        if (file != null) {
+                            Write.write(canvas, file);
+                        }
+                    }
+                });
 
         //create tool buttons pane
         HBox drawingtools_container = new HBox();
