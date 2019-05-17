@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -84,6 +86,17 @@ public class Main extends Application {
                         File file = fileChooser.showSaveDialog(stage);
                         if (file != null) {
                             Write.write(canvas, file);
+                        }
+                    }
+                });
+
+        stage.addEventHandler(KeyEvent.KEY_PRESSED,
+                new EventHandler<KeyEvent>() {
+                    @Override
+                    public void handle(KeyEvent t) {
+                        if(t.getCode()== KeyCode.ESCAPE){
+                            canvas.completePolygon();
+                            System.out.println("Poly done!");
                         }
                     }
                 });

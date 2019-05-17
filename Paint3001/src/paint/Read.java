@@ -38,9 +38,22 @@ public class Read{
                     Shape plot = new PaintPlot();
                     plot.addXCoord(Double.parseDouble(content[1]) * canvasSize);
                     plot.addYCoord(Double.parseDouble(content[2]) * canvasSize);
+
+                    canvas.addToActions(plot);
                 }
                 else if(content[0].equals("POLYGON")){
-
+                    Shape polygon = new PaintPolygon();
+                    for(int x = 1; x < content.length; x++){
+                        if(!(x % 2 == 0)) {
+                            polygon.addXCoord(Double.parseDouble(content[x]) * canvasSize);
+                        }
+                        else {
+                            polygon.addYCoord(Double.parseDouble(content[x]) * canvasSize);
+                        }
+                    }
+                    polygon.addXCoord(Double.parseDouble(content[1]) * canvasSize);
+                    polygon.addYCoord(Double.parseDouble(content[2]) * canvasSize);
+                    canvas.addToActions(polygon);
                 }
                 else if(content[0].equals("LINE")){
                     Shape lineShape = new PaintLine();
