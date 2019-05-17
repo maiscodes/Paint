@@ -3,6 +3,9 @@ package paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PaintPolygon extends Shape {
 
     public PaintPolygon(){
@@ -19,27 +22,32 @@ public class PaintPolygon extends Shape {
         }
 
         if (gc.getFill() == Color.TRANSPARENT) {
-            gc.strokePolygon(x_coords, y_coords, x_coords.length - 1);
+            gc.strokePolygon(x_coords, y_coords, x_coords.length);
         }
         else {
-            gc.fillPolygon(x_coords, y_coords, x_coords.length - 1);
-            gc.strokePolygon(x_coords, y_coords, x_coords.length - 1);
+            gc.fillPolygon(x_coords, y_coords, x_coords.length);
+            gc.strokePolygon(x_coords, y_coords, x_coords.length);
         }
 
-    };
+    }
 
     public String printInstruction(){
         // instructions don't print out the original coordinate at the end, will need to reappend when reading from file
         double x;
         double y;
-        String instruction = String.format("POLYGON");
+        String instruction = this.shape_type.toString();
 
-        for (int p = 0; p < x_coord.size() - 1; p++) {
+        for (int p = 0; p < x_coord.size() - 2; p++) {
             x = Double.valueOf(x_coord.get(p))/canvas_px;
             y = Double.valueOf(y_coord.get(p))/canvas_px;
             instruction += String.format(" %.2f %.2f", x, y);
         }
         System.out.println(instruction);
         return instruction;
+    }
+
+    public void setLastCoord(double x, double y){
+        x_coord.set(x_coord.size() - 1, x);
+        y_coord.set(y_coord.size() - 1, y);
     }
 }

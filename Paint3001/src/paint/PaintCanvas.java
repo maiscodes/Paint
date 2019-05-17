@@ -3,8 +3,10 @@ package paint;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.input.KeyCode;
 
 import java.util.ArrayList;
 
@@ -17,6 +19,7 @@ public class PaintCanvas extends Canvas {
     private ArrayList<Action> actions = new ArrayList<>();
     private Color fillColour;
     private Color penColour;
+    private boolean polyEdit;
 
     public PaintCanvas(int pixels, UndoHistoryListView<String> undoStack) {
         this.pixels = pixels;
@@ -26,30 +29,62 @@ public class PaintCanvas extends Canvas {
         this.shapeType = ShapeType.LINE;
         this.fillColour = Color.TRANSPARENT;
         this.penColour = Color.BLACK;
+        this.polyEdit = false;
 
         //Read.read(this);
 
         //redraw();
 
         //Canvas events
-        addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+        addEventHandler(MouseEvent.MOUSE_CLICKED,
+                new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        if(shapeType == ShapeType.PLOT){
+                            Shape plot = new PaintPlot();
+                            plot.addXCoord(event.getX());
+                            plot.addYCoord(event.getY());
+                            actions.add(plot);
+
+                            plot.draw(gc);
+                        }
+                        else if(shapeType == ShapeType.POLYGON && !polyEdit){
+                            System.out.println("poly created");
+                            Shape polygon = new PaintPolygon();
+                            polygon.addXCoord(event.getX());
+                            polygon.addYCoord(event.getY());
+                            polygon.addXCoord(event.getX());
+                            polygon.addYCoord(event.getY());
+                            actions.add(polygon);
+                            polyEdit = true;
+
+                            polygon.draw(gc);
+                        }
+                        else if(shapeType == ShapeType.POLYGON && polyEdit){
+                            System.out.println("poly edited");
+                            Shape polygon = (Shape) actions.get(actions.size() - 1);
+
+                            polygon.addXCoord(event.getX());
+                            polygon.addYCoord(event.getY());
+                            polygon.draw(gc);
+
+                            actions.set(actions.size() - 1, polygon);
+                            redraw();
+                        }
+                    }
+        });
+
+        addEventHandler(MouseEvent.MOUSE_MOVED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                if(shapeType == ShapeType.PLOT){
-                    Shape plot = new PaintPlot();
-                    plot.addXCoord(event.getX());
-                    plot.addYCoord(event.getY());
-                    actions.add(plot);
-
-                    plot.draw(gc);
-                }
-                else if(shapeType == ShapeType.POLYGON){
-                    Shape polygon = new PaintPolygon();
-                    polygon.addXCoord(event.getX());
-                    polygon.addYCoord(event.getY());
-                    actions.add(polygon);
-
-                    polygon.draw(gc);
+                if(shapeType == ShapeType.POLYGON && polyEdit){
+                    PaintPolygon polygon = (PaintPolygon) actions.get(actions.size() - 1);
+                    if(polygon.getXCoords().size() > 1) {
+                        System.out.println("poly Live");
+                        polygon.setLastCoord(event.getX(), event.getY());
+                        redraw();
+                        polygon.draw(gc);
+                    }
                 }
             }
         });
@@ -112,6 +147,18 @@ public class PaintCanvas extends Canvas {
 
     public GraphicsContext getGraphicsContext() {
         return gc;
+    }
+
+    public void completePolygon(){
+        if(polyEdit){
+            this.polyEdit = false;
+            Shape polygon = (Shape) actions.get(actions.size() - 1);
+            polygon.addXCoord(polygon.getXCoords().get(0));
+            polygon.addYCoord(polygon.getYCoords().get(0));
+
+            actions.set(actions.size() - 1, polygon);
+            polygon.printInstruction();
+        }
     }
 
     public ShapeType getShapeType() {
