@@ -32,6 +32,28 @@ public class PaintCanvas extends Canvas {
         //redraw();
 
         //Canvas events
+        addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if(shapeType == ShapeType.PLOT){
+                    Shape plot = new PaintPlot();
+                    plot.addXCoord(event.getX());
+                    plot.addYCoord(event.getY());
+                    actions.add(plot);
+
+                    plot.draw(gc);
+                }
+                else if(shapeType == ShapeType.POLYGON){
+                    Shape polygon = new PaintPolygon();
+                    polygon.addXCoord(event.getX());
+                    polygon.addYCoord(event.getY());
+                    actions.add(polygon);
+
+                    polygon.draw(gc);
+                }
+            }
+        });
+
         addEventHandler(MouseEvent.MOUSE_PRESSED,
                 new EventHandler<MouseEvent>() {
 
@@ -41,25 +63,16 @@ public class PaintCanvas extends Canvas {
                         double y = event.getY();
 
                         System.out.println("X: " + event.getX() + "\nY: " + event.getY());
-                        if(shapeType == ShapeType.PLOT){
-                            Shape plot = new PaintPlot();
-                            plot.addXCoord(event.getX());
-                            plot.addYCoord(event.getY());
-                            actions.add(plot);
 
-                            plot.draw(gc);
-                        }
                         if(shapeType == ShapeType.RECTANGLE){
                             Shape rect = new PaintRectangle();
                             initShape(rect, x, y);
                         }
-
-                        if(shapeType == ShapeType.ELLIPSE){
+                        else if(shapeType == ShapeType.ELLIPSE){
                             Shape ellipse = new PaintEllipse();
                             initShape(ellipse, x, y);
                         }
-
-                        if(shapeType == ShapeType.LINE){
+                        else if(shapeType == ShapeType.LINE){
                             Shape line = new PaintLine();
                             initShape(line, x, y);
                         }
