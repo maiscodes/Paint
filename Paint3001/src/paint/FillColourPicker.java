@@ -6,7 +6,7 @@ import javafx.event.EventHandler;
 
 public class FillColourPicker extends ColorPicker {
 
-    public FillColourPicker (PaintCanvas canvas){
+    public FillColourPicker (PaintCanvas canvas, UndoHistoryListView<String> undoStack){
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
@@ -14,6 +14,7 @@ public class FillColourPicker extends ColorPicker {
 
                 SetFill setFill = new SetFill(getValue());
                 canvas.addToActions(setFill);
+                undoStack.updateHistoryListView(canvas.getActions());
 
             }
         };

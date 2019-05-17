@@ -18,7 +18,7 @@ public class PaintCanvas extends Canvas {
     private Color fillColour;
     private Color penColour;
 
-    public PaintCanvas(int pixels) {
+    public PaintCanvas(int pixels, UndoHistoryListView<String> undoStack) {
         this.pixels = pixels;
         super.setWidth(pixels);
         super.setHeight(pixels);
@@ -104,7 +104,7 @@ public class PaintCanvas extends Canvas {
                         if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE){
                             finalShape(x, y);
                         }
-
+                        undoStack.updateHistoryListView(actions);
                         redraw();
                     }
                 });
@@ -174,6 +174,13 @@ public class PaintCanvas extends Canvas {
         actions.set(actions.size() - 1, shape);
         shape.printInstruction();
     }
+
+    public void updateActions(ArrayList<Action> actions) {
+          this.actions.clear();
+          for (int a = 0; a < actions.size(); a++){
+              this.actions.add(actions.get(a));
+          };
+      }
 
     public void redraw(){
         gc.clearRect(0,0, this.getWidth(), this.getHeight());

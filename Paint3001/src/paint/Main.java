@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -12,13 +13,8 @@ import javafx.collections.FXCollections;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.StackPane;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
 import javafx.scene.paint.*;
 import javafx.scene.canvas.*;
 import javafx.scene.control.ListView;
@@ -45,6 +41,15 @@ public class Main extends Application {
 
         final FileChooser fileChooser = new FileChooser();
 
+        // creating the list view for the undo stack, maybe store shapes?
+        VBox undo_container = new VBox();
+        Label undo_lbl = new Label("Undo History");
+        UndoHistoryListView<String> undo_stack = new UndoHistoryListView<String>();
+        ObservableList<String> action_list = FXCollections.observableArrayList("Instruction 1", "Instruction 2", "Instruction 3");
+        undo_stack.setItems(action_list);
+        ObservableList undo_container_contents = undo_container.getChildren();
+        //undo_container_contents.addAll(undo_lbl, undo_stack);
+
         //additional method to set style son!
         String style = "-fx-background-color: rgba(47, 51, 58, 0.9);";
         menu_container.setStyle(style);
@@ -57,7 +62,16 @@ public class Main extends Application {
         menuButtons.addAll(menu_lbl, open_btn, save_btn, new_btn);
 
         // create canvas, coordinates works from top left
-        PaintCanvas canvas = new PaintCanvas(500);
+        PaintCanvas canvas = new PaintCanvas(500, undo_stack);
+        PaintCanvas tempCanvas = new PaintCanvas(500, undo_stack);
+        Pane canvasPane = new Pane();
+        canvasPane.getChildren().add(canvas);
+        canvasPane.getChildren().add(tempCanvas);
+        canvas.toFront();
+
+        //Undo button here
+        ViewActionsButton view_btn = new ViewActionsButton(canvas, tempCanvas, undo_stack);
+        undo_container_contents.addAll(undo_lbl, undo_stack, view_btn);
 
         open_btn.setOnAction(
                 new EventHandler<ActionEvent>() {
@@ -114,7 +128,7 @@ public class Main extends Application {
         // create the colour tools container, can create function to return based on name
         VBox pencolour_container = new VBox();
         Label pencolour_lbl = new Label("Pen Colour");
-        ColorPicker pencolour_picker = new PenColourPicker(canvas);
+        ColorPicker pencolour_picker = new PenColourPicker(canvas, undo_stack);
 
         // add the pen colour components to the container
         ObservableList pencolours_list = pencolour_container.getChildren();
@@ -122,18 +136,11 @@ public class Main extends Application {
 
         VBox shapefill_container = new VBox();
         Label shapefill_lbl = new Label("Shape Fill Colour");
-        ColorPicker shapefill_picker = new FillColourPicker(canvas);
+        ColorPicker shapefill_picker = new FillColourPicker(canvas, undo_stack);
         ObservableList shapefill_list = shapefill_container.getChildren();
         shapefill_list.addAll(shapefill_lbl, shapefill_picker);
 
-        // creating the list view for the undo stack, maybe store shapes?
-        VBox undo_container = new VBox();
-        Label undo_lbl = new Label("Undo History");
-        ListView<String> undo_stack = new ListView<String>();
-        ObservableList<String> action_list = FXCollections.observableArrayList("Instruction 1", "Instruction 2", "Instruction 3");
-        undo_stack.setItems(action_list);
-        ObservableList undo_container_contents = undo_container.getChildren();
-        undo_container_contents.addAll(undo_lbl, undo_stack);
+
 
         // now put all the tools together
         Label drawingtools_lbl = new Label("Drawing Tools");
@@ -142,20 +149,20 @@ public class Main extends Application {
         style = "-fx-background-color: rgba(79, 84, 91, 1);";
         toolbar.setStyle(style);
         ObservableList toolbar_contents = toolbar.getChildren();
-        toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container);
+        toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container, view_btn);
 
         // also for functionality test click/hover event of canvas
 
         //idea for undo history stack -- get number value and then for loop recreate
 
-        // look into extending graphics context for creating our shape objects
 
         //Setting the top, bottom, center, right and left nodes to the pane
+
         window_container.setTop(menu_container);
         //window_container.setBottom(new TextField("Tools"));
         window_container.setLeft(toolbar);
         window_container.setRight(new TextField("Zoom"));
-        window_container.setCenter(canvas);
+        window_container.setCenter(canvasPane);
 
         //Creating a scene object
         Scene scene = new Scene(rootPane);
