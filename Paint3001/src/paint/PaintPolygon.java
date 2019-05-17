@@ -32,7 +32,7 @@ public class PaintPolygon extends Shape {
         // instructions don't print out the original coordinate at the end, will need to reappend when reading from file
         double x;
         double y;
-        String instruction = String.format("POLYGON");
+        String instruction = this.shape_type.toString();
 
         for (int p = 0; p < x_coord.size() - 1; p++) {
             x = Double.valueOf(x_coord.get(p))/canvas_px;

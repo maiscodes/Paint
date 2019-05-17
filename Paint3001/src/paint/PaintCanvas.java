@@ -32,26 +32,27 @@ public class PaintCanvas extends Canvas {
         //redraw();
 
         //Canvas events
-        addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if(shapeType == ShapeType.PLOT){
-                    Shape plot = new PaintPlot();
-                    plot.addXCoord(event.getX());
-                    plot.addYCoord(event.getY());
-                    actions.add(plot);
+        addEventHandler(MouseEvent.MOUSE_CLICKED,
+                new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        if(shapeType == ShapeType.PLOT){
+                            Shape plot = new PaintPlot();
+                            plot.addXCoord(event.getX());
+                            plot.addYCoord(event.getY());
+                            actions.add(plot);
 
-                    plot.draw(gc);
-                }
-                else if(shapeType == ShapeType.POLYGON){
-                    Shape polygon = new PaintPolygon();
-                    polygon.addXCoord(event.getX());
-                    polygon.addYCoord(event.getY());
-                    actions.add(polygon);
+                            plot.draw(gc);
+                        }
+                        else if(shapeType == ShapeType.POLYGON){
+                            Shape polygon = new PaintPolygon();
+                            polygon.addXCoord(event.getX());
+                            polygon.addYCoord(event.getY());
+                            actions.add(polygon);
 
-                    polygon.draw(gc);
-                }
-            }
+                            polygon.draw(gc);
+                        }
+                    }
         });
 
         addEventHandler(MouseEvent.MOUSE_PRESSED,
