@@ -43,7 +43,7 @@ public class PaintEllipse extends Shape {
         Double Y1 =  Double.valueOf(y_coord.get(0))/canvas_px;
         Double Y2 =  Double.valueOf(y_coord.get(1))/canvas_px;
         String instruction = String.format("ELLIPSE %.2f %.2f %.2f %.2f",X1, Y1, X2, Y2);
-        System.out.print(instruction);
+        System.out.println(instruction);
         return instruction;
     }
 }

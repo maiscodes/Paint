@@ -54,10 +54,6 @@ public class Main extends Application {
 
         // create canvas, coordinates works from top left
         PaintCanvas canvas = new PaintCanvas(500);
-        //make it white for now
-        GraphicsContext gc = canvas.getGraphicsContext();
-        gc.setFill(Color.WHITE);
-        gc.fillRect(0, 0, 400, 400);
 
         //create tool buttons pane
         HBox drawingtools_container = new HBox();
@@ -114,109 +110,6 @@ public class Main extends Application {
         toolbar.setStyle(style);
         ObservableList toolbar_contents = toolbar.getChildren();
         toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container);
-
-
-
-        // testing the default shape tools provided
-        gc.setFill(Color.GREEN);
-        gc.setStroke(Color.BLUE);
-
-        //line
-        gc.strokeLine(40, 10, 10, 40);
-
-
-        //test out paintLine class also when storing out actions, maybe another class??
-        // canvas should store current colour, pen colour and count
-        Shape testLine = new PaintLine();
-        testLine.addXCoord(300);
-        testLine.addYCoord(300);
-        testLine.addXCoord(300);
-        testLine.addYCoord(350);
-        testLine.printInstruction();
-        //testLine.draw(gc);
-
-
-        //test out paintRectangle class
-        //gc.setFill(Color.RED);
-        SetFill fill1 = new SetFill(Color.RED);
-        Shape testRect = new PaintRectangle();
-        testRect.addXCoord(100);
-        testRect.addYCoord(100);
-        testRect.addXCoord(200);
-        testRect.addYCoord(200);
-        //testRect.draw(gc);
-
-        //gc.setFill(Color.TRANSPARENT);
-        SetFill fill2 = new SetFill(Color.TRANSPARENT);
-        Shape testRect1 = new PaintRectangle();
-        testRect1.addXCoord(200);
-        testRect1.addYCoord(200);
-        testRect1.addXCoord(300);
-        testRect1.addYCoord(300);
-        //testRect1.draw(gc);
-
-        //test ellipse
-        SetFill fill3 = new SetFill(Color.ORANGE);
-        SetPen stroke1 = new SetPen(Color.PURPLE);
-        Shape testEllipse = new PaintEllipse();
-        testEllipse.addXCoord(100);
-        testEllipse.addYCoord(50);
-        testEllipse.addXCoord(200);
-        testEllipse.addYCoord(100);
-
-
-        //test Polygon
-        SetFill fill4 = new SetFill(Color.GREEN);
-        SetPen stroke2 = new SetPen(Color.RED);
-        Shape testPolygon = new PaintPolygon();
-        testPolygon.addXCoord(100);
-        testPolygon.addYCoord(300);
-        testPolygon.addXCoord(300);
-        testPolygon.addYCoord(300);
-        testPolygon.addXCoord(200);
-        testPolygon.addYCoord(100);
-        testPolygon.addXCoord(100);
-        testPolygon.addYCoord(300);
-
-        //test plot
-        Shape testPlot = new PaintPlot();
-        testPlot.addXCoord(350);
-        testPlot.addYCoord(350);
-
-
-        //okay time to test if can store in array now colours
-        ArrayList<Action> actions = new ArrayList<>();
-        actions.add(testLine);
-        actions.add(fill1);
-        actions.add(testRect);
-        actions.add(fill2);
-        actions.add(testRect1);
-        actions.add(fill3);
-        actions.add(stroke1);
-        actions.add(testEllipse);
-        actions.add(fill4);
-        actions.add(stroke2);
-        actions.add(testPolygon);
-        actions.add(testPlot);
-
-        // for history stack, get value of instruction and then create new canvas and render to that point
-        for (int a = 0; a < actions.size(); a++) {
-            actions.get(a).draw(gc);
-            actions.get(a).printInstruction();
-        }
-
-        //rectangle
-        gc.fillRect(110, 60, 30, 30);
-        gc.strokeRect(160, 60, 30, 30);
-
-        //ellipse so fill - when not transparent, stroke when transparent
-        gc.fillOval(10, 60, 30, 30);
-        gc.strokeOval(60, 60, 30, 30);
-
-        //polygon
-        gc.strokePolygon(new double[]{60, 90, 60, 90},
-                new double[]{210, 210, 240, 240}, 4);
-
 
         // also for functionality test click/hover event of canvas
 

@@ -27,6 +27,10 @@ public class PaintCanvas extends Canvas {
         this.fillColour = Color.TRANSPARENT;
         this.penColour = Color.BLACK;
 
+        Read.read(this);
+
+        redraw();
+
         //Canvas events
         addEventHandler(MouseEvent.MOUSE_PRESSED,
                 new EventHandler<MouseEvent>() {
