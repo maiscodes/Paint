@@ -1,20 +1,22 @@
 package paint;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.InputStream;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.paint.*;
+import javafx.scene.canvas.*;
+import javafx.stage.FileChooser;
+
+import java.util.ArrayList;
 //import javafx.scene.shape.Line;
 //import javafx.scene.shape.Rectangle;
 //import javafx.scene.shape.Ellipse;
@@ -56,7 +58,6 @@ public class Main extends Application {
         toolBar.setStyle(style);
         String button_style= "-fx-background-color:rgb(5, 5, 5), rgb(87, 89, 92), linear-gradient(to bottom, rgb(74, 75, 78) 2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 1 1 1 0, 2 1 1 1; -fx-background-radius: 0; -fx-padding: 0.4em 1.833333em 0.4em 1.833333em;";
         open_btn.setStyle(button_style);
-
         save_btn.setStyle(button_style);
         new_btn.setStyle(button_style);
         view_btn.setStyle(button_style);
@@ -66,14 +67,14 @@ public class Main extends Application {
         //rootPane.getChildren().addAll(window_container, menu_container);
 
         //Label menu_lbl = new Label("Menu");
-       // ObservableList menuButtons = menu_container.getChildren();
-       // menuButtons.addAll(menu_lbl, open_btn, save_btn, new_btn);
+        // ObservableList menuButtons = menu_container.getChildren();
+        // menuButtons.addAll(menu_lbl, open_btn, save_btn, new_btn);
 
         String button_pressed_Style = "-fx-background-color: rgb(5, 5, 5), rgb(55, 57, 58), linear-gradient(to top, rgb(74, 75, 78) 2%, rgb(39, 40, 40) 98%);-fx-background-insets: 0, 1 1 1 0, 2 1 1 1;\n" +
                 "    -fx-background-radius: 0;\n" +
                 "    -fx-padding: 0.4em 1.833333em 0.4em 1.833333em";
         // create canvas, coordinates works from top left
-       PaintCanvas canvas = new PaintCanvas(500);
+        PaintCanvas canvas = new PaintCanvas(500);
 
         open_btn.setOnAction(
                 new EventHandler<ActionEvent>() {
@@ -122,34 +123,11 @@ public class Main extends Application {
         // create the buttons
 
         Button line_btn = new PaintButton(ShapeType.LINE, canvas);
-        InputStream input = getClass().getResourceAsStream("line.png");
-        Image image = new Image(input, 40, 40, true, true);
-        ImageView imageView = new ImageView(image);
-        line_btn.setGraphic(imageView);
 
         Button plot_btn = new PaintButton(ShapeType.PLOT, canvas);
-        InputStream input2 = getClass().getResourceAsStream("dot2.jpg");
-        Image image2 = new Image(input2, 40, 40, true, true);
-        ImageView imageView2 = new ImageView(image2);
-        plot_btn.setGraphic(imageView2);
-
         Button rect_btn = new PaintButton(ShapeType.RECTANGLE, canvas);
-        InputStream input3 = getClass().getResourceAsStream("square2.png");
-        Image image3 = new Image(input3, 58, 58, true, true);
-        ImageView imageView3 = new ImageView(image3);
-        rect_btn.setGraphic(imageView3);
-
         Button ellipse_btn = new PaintButton(ShapeType.ELLIPSE, canvas);
-        InputStream input4 = getClass().getResourceAsStream("oval.png");
-        Image image4 = new Image(input4, 50, 50, true, true);
-        ImageView imageView4 = new ImageView(image4);
-        ellipse_btn.setGraphic(imageView4);
-
         Button polygon_btn = new PaintButton(ShapeType.POLYGON, canvas);
-        InputStream input5 = getClass().getResourceAsStream("hexy.png");
-        Image image5 = new Image(input5, 40, 40, true, true);
-        ImageView imageView5 = new ImageView(image5);
-        polygon_btn.setGraphic(imageView5);
 
         buttonBar2.getChildren().addAll(line_btn, plot_btn, rect_btn, ellipse_btn, polygon_btn);
         drawingTools.getItems().addAll(spacer1, buttonBar2);
@@ -176,7 +154,7 @@ public class Main extends Application {
         sep.setStyle(separator_style);
 
 
-                // creating the list view for the undo stack, maybe store shapes?
+        // creating the list view for the undo stack, maybe store shapes?
         VBox undo_container = new VBox();
         Label undo_lbl = new Label("Undo History");
         ListView<String> undo_stack = new ListView<String>();
@@ -202,7 +180,7 @@ public class Main extends Application {
         // look into extending graphics context for creating our shape objects
 
         //Setting the top, bottom, center, right and left nodes to the pane
-       // window_container.setTop(menu_container);
+        // window_container.setTop(menu_container);
         //window_container.setBottom(new TextField("Tools"));
         window_container.setRight(toolbar);
         window_container.setCenter(canvas);
