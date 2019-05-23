@@ -1,207 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-=======
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/src/paint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PaintPolygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintPolygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Read.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Stashed changes
-    </list>
->>>>>>> Stashed changes
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="73d9942b-3a7b-4392-8069-7349b9a711c4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties converted="true" />
-    <breakpoint_rules converted="true" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="949">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7950#7951#0" expanded="true" />
-=======
-<<<<<<< Updated upstream
-            <state relative-caret-position="233">
-              <caret line="97" column="50" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6980#6981#0" expanded="true" />
-                <element signature="e#7008#7009#0" expanded="true" />
-=======
-            <state relative-caret-position="102">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< Updated upstream
-        <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="-1267">
-              <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
-=======
-            <state relative-caret-position="391">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
->>>>>>> Stashed changes
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5559#5560#0" expanded="true" />
-                <element signature="e#6028#6029#0" expanded="true" />
-                <element signature="e#6123#6124#0" expanded="true" />
-                <element signature="e#6203#6204#0" expanded="true" />
-                <element signature="e#6285#6286#0" expanded="true" />
-                <element signature="e#6208#6209#0" expanded="true" />
-                <element signature="e#6248#6249#0" expanded="true" />
-                <element signature="e#6293#6294#0" expanded="true" />
-                <element signature="e#6332#6333#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="262">
-              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1461#1462#0" expanded="true" />
-                <element signature="e#1485#1486#0" expanded="true" />
-=======
-            <state relative-caret-position="2142">
-              <caret line="136" column="13" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4344#4345#0" expanded="true" />
-                <element signature="e#4384#4385#0" expanded="true" />
-                <element signature="e#4429#4430#0" expanded="true" />
-                <element signature="e#4468#4469#0" expanded="true" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="150">
-<<<<<<< Updated upstream
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-=======
-              <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-=======
-            <state relative-caret-position="374">
-              <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+            <state relative-caret-position="170">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< Updated upstream
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/module-info.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="405">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-=======
-            <state relative-caret-position="323">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
->>>>>>> Stashed changes
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1459#1460#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,16 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="570">
-              <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
-=======
-            <state relative-caret-position="629">
-              <caret line="40" column="60" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="60" />
->>>>>>> Stashed changes
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -227,37 +36,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
->>>>>>> Stashed changes
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
+        <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="321">
-              <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
-=======
-<<<<<<< Updated upstream
-            <state relative-caret-position="350">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
->>>>>>> Stashed changes
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#handle#0;class#2800:3385" />
-                <element signature="class#3459:4416" />
-                <element signature="method#handle#0;class#4490:4982" />
-                <element signature="class#5057:5580" />
-                <element signature="method#completePolygon#0;class#PaintCanvas#0" />
-                <element signature="method#initShape#0;class#PaintCanvas#0" />
-              </folding>
-=======
-            <state relative-caret-position="34">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
->>>>>>> Stashed changes
+            <state relative-caret-position="187">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/SetPen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -265,21 +63,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="420">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-=======
-<<<<<<< Updated upstream
-            <state relative-caret-position="345">
-              <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
->>>>>>> Stashed changes
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="34">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="3" selection-end-column="43" />
->>>>>>> Stashed changes
+            <state relative-caret-position="289">
+              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -287,20 +81,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/PaintPolygon.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="150">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-=======
-<<<<<<< Updated upstream
-            <state relative-caret-position="555">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-=======
-            <state relative-caret-position="510">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+            <state relative-caret-position="357">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintRectangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="254" column="25" lean-forward="true" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#5856#5857#0" expanded="true" />
+                <element signature="e#5881#5882#0" expanded="true" />
+                <element signature="e#6313#6314#0" expanded="true" />
+                <element signature="e#6350#6351#0" expanded="true" />
+                <element signature="e#6403#6404#0" expanded="true" />
+                <element signature="e#6445#6446#0" expanded="true" />
+                <element signature="e#6490#6491#0" expanded="true" />
+                <element signature="e#6525#6526#0" expanded="true" />
+                <element signature="e#6572#6573#0" expanded="true" />
+                <element signature="e#6607#6608#0" expanded="true" />
+                <element signature="e#6653#6654#0" expanded="true" />
+                <element signature="e#6693#6694#0" expanded="true" />
+                <element signature="e#6738#6739#0" expanded="true" />
+                <element signature="e#6777#6778#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -311,76 +132,54 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="module-info" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>canv</find>
-      <find>event.getX()</find>
-      <find>ELLIPSE</find>
-      <find>canvasSize</find>
-      <find>print</find>
+      <find>action</find>
+      <find>complet</find>
+      <find>polygon</find>
       <find>pixels</find>
     </findStrings>
     <replaceStrings>
-      <replace>x</replace>
-      <replace>* canvasSize</replace>
+      <replace>size</replace>
     </replaceStrings>
   </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/module-info.java" />
-        <option value="$PROJECT_DIR$/src/paint/Action.java" />
-        <option value="$PROJECT_DIR$/src/paint/DrawShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/ShapeType.java" />
-        <option value="$PROJECT_DIR$/src/paint/SetFill.java" />
-        <option value="$PROJECT_DIR$/src/paint/SetStroke.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintPlot.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintRectangle.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintLine.java" />
-        <option value="$PROJECT_DIR$/src/fileHandling/file.java" />
-        <option value="$PROJECT_DIR$/src/fileHandling/read.java" />
-        <option value="$PROJECT_DIR$/src/paint/read.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintEllipse.java" />
-        <option value="$PROJECT_DIR$/src/paint/Write.java" />
-        <option value="$PROJECT_DIR$/src/paint/Shape.java" />
         <option value="$PROJECT_DIR$/src/paint/Main.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintCanvas.java" />
+        <option value="$PROJECT_DIR$/src/paint/Shape.java" />
+        <option value="$PROJECT_DIR$/src/paint/Action.java" />
+        <option value="$PROJECT_DIR$/src/paint/SetFill.java" />
+        <option value="$PROJECT_DIR$/src/paint/SetPen.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintEllipse.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintLine.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintPlot.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintPolygon.java" />
-        <option value="$PROJECT_DIR$/src/paint/Read.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintRectangle.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintCanvas.java" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1490" />
-    <option name="width" value="1522" />
-    <option name="height" value="1932" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-74" />
+    <option name="y" value="-12" />
+    <option name="width" value="3020" />
+    <option name="height" value="1668" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -392,12 +191,12 @@
             <path>
               <item name="Paint3001" type="b2602c69:ProjectViewProjectNode" />
               <item name="Paint3001" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Paint3001" type="b2602c69:ProjectViewProjectNode" />
               <item name="Paint3001" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Paint3001" type="b2602c69:ProjectViewProjectNode" />
@@ -414,30 +213,30 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558578772857" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558588305906" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Paint-Resize-Canvas/Paint3001" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="paint" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -453,72 +252,16 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="paint.Main" />
       <module name="Paint" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="paint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+      <option name="MAIN_CLASS_NAME" value="paint.Main" />
+      <module name="Paint" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -529,346 +272,214 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-      <created>1359379246138</created>
+      <changelist id="9d4d7601-1e42-4d48-95d6-7a644b112dfe" name="Default Changelist" comment="" />
+      <created>1558569036715</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1359379246138</updated>
-      <workItem from="1359379250712" duration="1302000" />
+      <updated>1558569036715</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
-  </component>
   <component name="ToolWindowManager">
-<<<<<<< Updated upstream
-    <frame x="321" y="23" width="1599" height="1177" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1369606" />
-=======
-    <frame x="745" y="0" width="761" height="966" extended-state="1" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-<<<<<<< Updated upstream
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.14404762" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22475107" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20893471" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32858837" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-<<<<<<< Updated upstream
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17359856" />
-=======
-<<<<<<< Updated upstream
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17359856" />
->>>>>>> Stashed changes
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39963832" />
-=======
-      <window_info anchor="bottom" id="Run" order="2" weight="0.17344497" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3262159" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
->>>>>>> Stashed changes
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-<<<<<<< Updated upstream
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32368898" />
-=======
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.1770335" />
->>>>>>> Stashed changes
-      <window_info anchor="bottom" id="Problems" order="9" />
-      <window_info anchor="bottom" id="Changes" order="10" />
-      <window_info anchor="bottom" id="Profiler" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" weight="0.3299539" />
-<<<<<<< Updated upstream
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32459313" />
-=======
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3241627" />
->>>>>>> Stashed changes
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3299539" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Maven" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/paint/paint.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintButtonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="68">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/SetStroke.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintButton.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="187">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/ShapeType.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/ViewActionsButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="289">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/RedoButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#803#811#0" expanded="true" />
+            <element signature="e#880#888#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/UndoButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/UndoHistoryListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <folding>
+            <element signature="e#8730#8731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/SetPen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="390">
-=======
-        <state relative-caret-position="391">
->>>>>>> Stashed changes
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
->>>>>>> Stashed changes
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="420">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-=======
-        <state relative-caret-position="345">
-          <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="85" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintRectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="60" />
->>>>>>> Stashed changes
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="405">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-=======
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
->>>>>>> Stashed changes
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module-info.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="949">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7950#7951#0" expanded="true" />
-          </folding>
-=======
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="3" selection-end-column="43" />
->>>>>>> Stashed changes
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="321">
-          <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
-=======
-<<<<<<< Updated upstream
-        <state relative-caret-position="-1267">
-          <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
-=======
-        <state relative-caret-position="510">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#handle#0;class#2800:3385" />
-            <element signature="class#3459:4416" />
-            <element signature="method#handle#0;class#4490:4982" />
-            <element signature="class#5057:5580" />
-            <element signature="method#completePolygon#0;class#PaintCanvas#0" />
-            <element signature="method#initShape#0;class#PaintCanvas#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/paint/PaintPolygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-=======
     <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="136" column="13" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
+        <state relative-caret-position="145">
+          <caret line="254" column="25" lean-forward="true" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4344#4345#0" expanded="true" />
-            <element signature="e#4384#4385#0" expanded="true" />
-            <element signature="e#4429#4430#0" expanded="true" />
-            <element signature="e#4468#4469#0" expanded="true" />
->>>>>>> Stashed changes
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#5856#5857#0" expanded="true" />
+            <element signature="e#5881#5882#0" expanded="true" />
+            <element signature="e#6313#6314#0" expanded="true" />
+            <element signature="e#6350#6351#0" expanded="true" />
+            <element signature="e#6403#6404#0" expanded="true" />
+            <element signature="e#6445#6446#0" expanded="true" />
+            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#6525#6526#0" expanded="true" />
+            <element signature="e#6572#6573#0" expanded="true" />
+            <element signature="e#6607#6608#0" expanded="true" />
+            <element signature="e#6653#6654#0" expanded="true" />
+            <element signature="e#6693#6694#0" expanded="true" />
+            <element signature="e#6738#6739#0" expanded="true" />
+            <element signature="e#6777#6778#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module-info.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintRectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="415">
+          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -883,6 +494,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -938,7 +550,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

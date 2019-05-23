@@ -10,7 +10,7 @@ public class SetPen extends Action {
         stroke_colour = colour;
     }
 
-    public void draw(GraphicsContext gc) {
+    public void draw(GraphicsContext gc, double px) {
         gc.setStroke(stroke_colour);
     }
 

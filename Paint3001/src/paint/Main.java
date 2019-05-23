@@ -4,9 +4,6 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -15,12 +12,16 @@ import javafx.stage.Stage;
 import java.io.File;
 
 import javafx.collections.FXCollections;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ColorPicker;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TextField;
 import javafx.scene.paint.*;
 import javafx.scene.canvas.*;
+import javafx.scene.control.ListView;
 import javafx.stage.FileChooser;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 //import javafx.scene.shape.Line;
 //import javafx.scene.shape.Rectangle;
@@ -34,16 +35,11 @@ public class Main extends Application {
     public void start(Stage stage) {
         //compartmentalise later
         StackPane rootPane = new StackPane();
-        String base_style = "-fx-background-color: #02031E;";
-        rootPane.setStyle(base_style);
         //Instantiating the main class
         BorderPane window_container = new BorderPane();
-        window_container.setId("background");
 
         // create menu pane
         FlowPane menu_container = new FlowPane();
-        ToolBar toolBar = new ToolBar();
-        window_container.setTop(toolBar);
 
         final FileChooser fileChooser = new FileChooser();
 
@@ -57,20 +53,13 @@ public class Main extends Application {
         //undo_container_contents.addAll(undo_lbl, undo_stack);
 
         //additional method to set style son!
-        String style="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color: linear-gradient(to bottom, derive(rgb(39, 40, 40),-30%), derive(rgb(39, 40, 40),-60%)),        linear-gradient(to bottom, rgb(74, 75, 78)2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";        menu_container.setStyle(style);
+        String style = "-fx-background-color: rgba(47, 51, 58, 0.9);";
+        menu_container.setStyle(style);
         rootPane.getChildren().addAll(window_container, menu_container);
-
-        HBox buttonBar = new HBox();
-        buttonBar.getStyleClass().setAll("segmented-button-bar");
         Button open_btn = new Button("Open");
         Button save_btn = new Button("Save");
         Button new_btn = new Button("New");
         Label menu_lbl = new Label("Menu");
-        open_btn.getStyleClass().addAll("first");
-        new_btn.getStyleClass().addAll("last", "capsule");
-        buttonBar.getChildren().addAll(open_btn, save_btn, new_btn);
-        toolBar.getItems().addAll( buttonBar);
-
         ObservableList menuButtons = menu_container.getChildren();
         menuButtons.addAll(menu_lbl, open_btn, save_btn, new_btn);
 
@@ -81,7 +70,13 @@ public class Main extends Application {
 
         //** RESIZABLE
         canvas.widthProperty().bind(canvasPane.widthProperty());
-        canvas.heightProperty().bind(canvasPane.widthProperty());
+        canvas.heightProperty().bind(canvasPane.heightProperty());
+
+        // ***
+        tempCanvas.widthProperty().bind(canvasPane.widthProperty());
+        tempCanvas.heightProperty().bind(canvasPane.heightProperty());
+
+        //**
         canvasPane.getChildren().add(canvas);
         canvasPane.getChildren().add(tempCanvas);
         canvas.toFront();
@@ -89,8 +84,6 @@ public class Main extends Application {
         //Undo button here
         ViewActionsButton view_btn = new ViewActionsButton(canvas, tempCanvas, undo_stack);
         //** MOVED THE UNDO CONTAINER DOWN
-
-
 
         //ADDING THE UNDO STUFF HERE
         UndoButton undo_btn = new UndoButton(canvas, undo_stack);
@@ -117,12 +110,13 @@ public class Main extends Application {
                                 Read.read(canvas, file);
                                 canvas.redraw();
                             }
-                        }
-                        catch (Exception err){
+                        } catch (Exception err) {
                             err.printStackTrace();
                         }
                     }
                 });
+
+
 
         save_btn.setOnAction(
                 new EventHandler<ActionEvent>() {
@@ -152,61 +146,27 @@ public class Main extends Application {
                 });
 
         //create tool buttons pane
-        ToolBar drawingTools = new ToolBar();
-        window_container.setBottom(drawingTools);
-
-        //HBox drawingtools_container = new HBox();
-        HBox buttonBar2 = new HBox();
-        buttonBar2.getStyleClass().setAll("segmented-button-bar-2");
+        HBox drawingtools_container = new HBox();
 
         // create the buttons
         Button line_btn = new PaintButton(ShapeType.LINE, canvas);
-        InputStream input = getClass().getResourceAsStream("line.png");
-        Image image = new Image(input, 40, 40, true, true);
-        ImageView imageView = new ImageView(image);
-        line_btn.setGraphic(imageView);
-
         Button plot_btn = new PaintButton(ShapeType.PLOT, canvas);
-        InputStream input2 = getClass().getResourceAsStream("dot2.jpg");
-        Image image2 = new Image(input2, 40, 40, true, true);
-        ImageView imageView2 = new ImageView(image2);
-        plot_btn.setGraphic(imageView2);
-
         Button rect_btn = new PaintButton(ShapeType.RECTANGLE, canvas);
-        InputStream input3 = getClass().getResourceAsStream("square2.png");
-        Image image3 = new Image(input3, 58, 58, true, true);
-        ImageView imageView3 = new ImageView(image3);
-        rect_btn.setGraphic(imageView3);
-
         Button ellipse_btn = new PaintButton(ShapeType.ELLIPSE, canvas);
-        InputStream input4 = getClass().getResourceAsStream("oval.png");
-        Image image4 = new Image(input4, 50, 50, true, true);
-        ImageView imageView4 = new ImageView(image4);
-        ellipse_btn.setGraphic(imageView4);
-
         Button polygon_btn = new PaintButton(ShapeType.POLYGON, canvas);
-        InputStream input5 = getClass().getResourceAsStream("hexy.png");
-        Image image5 = new Image(input5, 40, 40, true, true);
-        ImageView imageView5 = new ImageView(image5);
-        polygon_btn.setGraphic(imageView5);
 
-        buttonBar2.getChildren().addAll(line_btn, plot_btn, rect_btn, ellipse_btn, polygon_btn);
-        drawingTools.getItems().addAll(buttonBar2);
-
-        String style0="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color:  #04052E; -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
-        drawingTools.setStyle(style0);
         // add the buttons in two columns
-//        VBox toolbar_c1 = new VBox();
-//        VBox toolbar_c2 = new VBox();
-//
-//        ObservableList c1_tools = toolbar_c1.getChildren();
-//        c1_tools.addAll(line_btn, plot_btn, rect_btn);
-//
-//        ObservableList c2_tools = toolbar_c2.getChildren();
-//        c2_tools.addAll(ellipse_btn, polygon_btn);
-//
-//        ObservableList toolbar_btns = drawingtools_container.getChildren();
-//        toolbar_btns.addAll(toolbar_c1, toolbar_c2);
+        VBox toolbar_c1 = new VBox();
+        VBox toolbar_c2 = new VBox();
+
+        ObservableList c1_tools = toolbar_c1.getChildren();
+        c1_tools.addAll(line_btn, plot_btn, rect_btn);
+
+        ObservableList c2_tools = toolbar_c2.getChildren();
+        c2_tools.addAll(ellipse_btn, polygon_btn);
+
+        ObservableList toolbar_btns = drawingtools_container.getChildren();
+        toolbar_btns.addAll(toolbar_c1, toolbar_c2);
 
         // create the colour tools container, can create function to return based on name
         VBox pencolour_container = new VBox();
@@ -229,10 +189,10 @@ public class Main extends Application {
         Label drawingtools_lbl = new Label("Drawing Tools");
         VBox toolbar = new VBox();
         //looks like you can give elements ids and style using css file
-        String style1="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color: linear-gradient(to bottom, derive(rgb(39, 40, 40),-30%), derive(rgb(39, 40, 40),-60%)),        linear-gradient(to bottom, rgb(74, 75, 78)2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
-        toolbar.setStyle(style1);
+        style = "-fx-background-color: rgba(79, 84, 91, 1);";
+        toolbar.setStyle(style);
         ObservableList toolbar_contents = toolbar.getChildren();
-        toolbar_contents.addAll(drawingtools_lbl, pencolour_container, shapefill_container, undo_container, view_btn);
+        toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container, view_btn);
 
         // also for functionality test click/hover event of canvas
 
@@ -243,7 +203,8 @@ public class Main extends Application {
 
         window_container.setTop(menu_container);
         //window_container.setBottom(new TextField("Tools"));
-        window_container.setRight(toolbar);
+        window_container.setLeft(toolbar);
+        window_container.setRight(new TextField("Zoom"));
         window_container.setCenter(canvasPane);
 
         //Creating a scene object

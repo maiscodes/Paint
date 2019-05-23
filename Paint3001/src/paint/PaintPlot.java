@@ -13,19 +13,19 @@ public class PaintPlot extends Shape {
         super(ShapeType.PLOT);
     }
 
-    public void draw(GraphicsContext gc){
+    public void draw(GraphicsContext gc, double px){
         //possibly omit the SetStroke when canvas class stores the pen and fill colours
         //gc.getStroke();
 
         //draw square dot
         PixelWriter pixel_writer = gc.getPixelWriter();
-        pixel_writer.setColor((int) Math.round(x_coord.get(0)), (int) Math.round(y_coord.get(0)), (Color)gc.getStroke());
+        pixel_writer.setColor((int) Math.round(x_coord.get(0) * px), (int) Math.round(y_coord.get(0) * px), (Color)gc.getStroke());
 
     };
 
     public String printInstruction(){
-        Double x = Double.valueOf(x_coord.get(0))/canvas_px;
-        Double y =  Double.valueOf(y_coord.get(0))/canvas_px;
+        Double x = Double.valueOf(x_coord.get(0));
+        Double y =  Double.valueOf(y_coord.get(0));
         String instruction = String.format("PLOT %.2f %.2f",x ,y );
         System.out.println(instruction);
         return instruction;

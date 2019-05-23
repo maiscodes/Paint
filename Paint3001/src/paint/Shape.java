@@ -11,7 +11,7 @@ public abstract class Shape extends Action{
     protected ArrayList<Double> x_coord;
     protected ArrayList<Double> y_coord;
     //for now, have canvas px stored-  later when canvas class can get from there
-    protected Integer canvas_px = 500;
+    protected Double canvas_px;
 
 
     public Shape(ShapeType shape_type){
@@ -54,6 +54,10 @@ public abstract class Shape extends Action{
 
     public void setY2Coord(double y){
         y_coord.set(1, y);
+    }
+
+    public void setCanvas_px(double pixels) {
+        canvas_px = pixels;
     }
 
     //public abstract void draw(GraphicsContext gc);

@@ -8,7 +8,7 @@ public class PaintEllipse extends Shape {
         super(ShapeType.ELLIPSE);
     }
 
-    public void draw(GraphicsContext gc){
+    public void draw(GraphicsContext gc, double px){
         double x, y, w, h;
 
         if(x_coord.get(1) < x_coord.get(0)){
@@ -29,19 +29,20 @@ public class PaintEllipse extends Shape {
         }
         //gc.fillRect(x, y, w, h); nope this line of code doesnt work if trans
         if (gc.getFill() == Color.TRANSPARENT) {
-            gc.strokeOval(x, y, w, h);
+            gc.strokeOval(x*px, y*px, w*px, h*px);
+
         }
         else {
-            gc.fillOval(x, y, w, h);
-            gc.strokeOval(x, y, w, h);
+            gc.fillOval(x*px, y*px, w*px, h*px);
+            gc.strokeOval(x*px, y*px, w*px, h*px);
         }
     };
 
     public String printInstruction(){
-        Double X1 = Double.valueOf(x_coord.get(0))/canvas_px;
-        Double X2 = Double.valueOf(x_coord.get(1))/canvas_px;
-        Double Y1 =  Double.valueOf(y_coord.get(0))/canvas_px;
-        Double Y2 =  Double.valueOf(y_coord.get(1))/canvas_px;
+        Double X1 = Double.valueOf(x_coord.get(0));
+        Double X2 = Double.valueOf(x_coord.get(1));
+        Double Y1 =  Double.valueOf(y_coord.get(0));
+        Double Y2 =  Double.valueOf(y_coord.get(1));
         String instruction = String.format("ELLIPSE %.2f %.2f %.2f %.2f",X1, Y1, X2, Y2);
         System.out.println(instruction);
         return instruction;

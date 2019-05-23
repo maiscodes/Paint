@@ -9,7 +9,7 @@ public class SetFill extends Action {
         fill_colour = colour;
     }
 
-    public void draw(GraphicsContext gc) {
+    public void draw(GraphicsContext gc, double px) {
         gc.setFill(fill_colour);
     }
 
