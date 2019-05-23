@@ -56,6 +56,10 @@ public abstract class Shape extends Action{
         y_coord.set(1, y);
     }
 
+    public ShapeType getShapeType(){
+        return this.shape_type;
+    }
+
     //public abstract void draw(GraphicsContext gc);
 
     //public abstract String printInstruction();

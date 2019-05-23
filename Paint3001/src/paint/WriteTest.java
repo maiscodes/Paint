@@ -16,7 +16,7 @@ class WriteTest {
 
     @BeforeEach
     public void setUp(){
-        canvas = new PaintCanvas(100, undo_stack);
+        canvas = new PaintCanvas(500, undo_stack);
     }
 
     @Test
