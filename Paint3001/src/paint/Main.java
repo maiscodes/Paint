@@ -78,13 +78,33 @@ public class Main extends Application {
         PaintCanvas canvas = new PaintCanvas(500, undo_stack);
         PaintCanvas tempCanvas = new PaintCanvas(500, undo_stack);
         Pane canvasPane = new Pane();
+
+        //** RESIZABLE
+        canvas.widthProperty().bind(canvasPane.widthProperty());
+        canvas.heightProperty().bind(canvasPane.widthProperty());
         canvasPane.getChildren().add(canvas);
         canvasPane.getChildren().add(tempCanvas);
         canvas.toFront();
 
         //Undo button here
         ViewActionsButton view_btn = new ViewActionsButton(canvas, tempCanvas, undo_stack);
-        undo_container_contents.addAll(undo_lbl, undo_stack, view_btn);
+        //** MOVED THE UNDO CONTAINER DOWN
+
+
+
+        //ADDING THE UNDO STUFF HERE
+        UndoButton undo_btn = new UndoButton(canvas, undo_stack);
+        RedoButton redo_btn = new RedoButton(canvas, undo_stack, undo_btn);
+        FlowPane undo_btn_container = new FlowPane();
+        ObservableList undo_btn_contents = undo_btn_container.getChildren();
+        undo_btn_contents.addAll(view_btn, undo_btn, redo_btn);
+
+        undo_container_contents.addAll(undo_lbl, undo_stack, undo_btn_container);
+
+
+
+
+        //END UNDO STUFF
 
         open_btn.setOnAction(
                 new EventHandler<ActionEvent>() {
@@ -93,11 +113,7 @@ public class Main extends Application {
                         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
                         File file = fileChooser.showOpenDialog(stage);
                         if (file != null) {
-                            try{
-                                Read.read(canvas, file);
-                            } catch (Exception error){
-                                error.printStackTrace();
-                            }
+                            Read.read(canvas, file);
                             canvas.redraw();
                         }
                     }

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class PaintCanvas extends Canvas {
 
-    private int pixels;
+    private double pixels;
     private GraphicsContext gc;
     private ShapeType shapeType;
     private ArrayList<Action> actions = new ArrayList<>();
@@ -21,10 +21,31 @@ public class PaintCanvas extends Canvas {
     private Color penColour;
     private boolean polyEdit;
 
+    // trying to make it resizable
+
+    @Override
+    public double prefWidth(double height) {
+        return getWidth();
+    }
+
+    @Override
+    public double prefHeight(double width) {
+        return getWidth();
+    }
+
+    @Override
+    public boolean isResizable() {
+        return true;
+    }
+
+
     public PaintCanvas(int pixels, UndoHistoryListView<String> undoStack) {
         this.pixels = pixels;
         super.setWidth(pixels);
         super.setHeight(pixels);
+        widthProperty().addListener(evt -> redraw());
+        heightProperty().addListener(evt -> redraw());
+
         this.gc = this.getGraphicsContext2D();
         this.shapeType = ShapeType.LINE;
         this.fillColour = Color.TRANSPARENT;
@@ -230,6 +251,12 @@ public class PaintCanvas extends Canvas {
       }
 
     public void redraw(){
+        double width = getWidth();
+        double height = getWidth();
+        this.pixels = getWidth();
+        //super.setHeight(getWidth());
+        //super.setWidth(getWidth());
+
         gc.clearRect(0,0, this.getWidth(), this.getHeight());
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, pixels, pixels);
