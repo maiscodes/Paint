@@ -112,9 +112,14 @@ public class Main extends Application {
                     public void handle(final ActionEvent e) {
                         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
                         File file = fileChooser.showOpenDialog(stage);
-                        if (file != null) {
-                            Read.read(canvas, file);
-                            canvas.redraw();
+                        try {
+                            if (file != null) {
+                                Read.read(canvas, file);
+                                canvas.redraw();
+                            }
+                        }
+                        catch (Exception err){
+                            err.printStackTrace();
                         }
                     }
                 });
