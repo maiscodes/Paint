@@ -42,8 +42,8 @@ public class Main extends Application {
         VBox undo_container = new VBox();
         Label undo_lbl = new Label("Undo History");
         UndoHistoryListView<String> undo_stack = new UndoHistoryListView<String>();
-        ObservableList<String> action_list = FXCollections.observableArrayList("Instruction 1", "Instruction 2", "Instruction 3");
-        undo_stack.setItems(action_list);
+        //ObservableList<String> action_list = FXCollections.observableArrayList("Instruction 1", "Instruction 2", "Instruction 3");
+        //undo_stack.setItems(action_list);
         ObservableList undo_container_contents = undo_container.getChildren();
         //undo_container_contents.addAll(undo_lbl, undo_stack);
 
@@ -108,13 +108,14 @@ public class Main extends Application {
                     public void handle(final ActionEvent e) {
                         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
                         File file = fileChooser.showOpenDialog(stage);
-                        try {
-                            if (file != null) {
+                        if (file != null) {
+                            try{
                                 Read.read(canvas, file);
-                                canvas.redraw();
+                            } catch (Exception error){
+                                error.printStackTrace();
                             }
-                        } catch (Exception err) {
-                            err.printStackTrace();
+                            canvas.redraw();
+                            undo_stack.updateHistoryListView(canvas.getActions());
                         }
                     }
                 });
