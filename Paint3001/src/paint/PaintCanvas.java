@@ -3,17 +3,15 @@ package paint;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.input.KeyCode;
 
 import java.util.ArrayList;
 
 
 public class PaintCanvas extends Canvas {
 
-    private int pixels;
+    private double size;
     private GraphicsContext gc;
     private ShapeType shapeType;
     private ArrayList<Action> actions = new ArrayList<>();
@@ -21,10 +19,31 @@ public class PaintCanvas extends Canvas {
     private Color penColour;
     private boolean polyEdit;
 
+    // trying to make it resizable
+
+    @Override
+    public double prefWidth(double height) {
+        return getWidth();
+    }
+
+    @Override
+    public double prefHeight(double width) {
+        return getWidth();
+    }
+
+    @Override
+    public boolean isResizable() {
+        return true;
+    }
+
+
     public PaintCanvas(int pixels, UndoHistoryListView<String> undoStack) {
-        this.pixels = pixels;
+        this.size = pixels;
         super.setWidth(pixels);
         super.setHeight(pixels);
+        widthProperty().addListener(evt -> redraw());
+        heightProperty().addListener(evt -> redraw());
+
         this.gc = this.getGraphicsContext2D();
         this.shapeType = ShapeType.LINE;
         this.fillColour = Color.TRANSPARENT;
@@ -42,31 +61,31 @@ public class PaintCanvas extends Canvas {
                     public void handle(MouseEvent event) {
                         if(shapeType == ShapeType.PLOT){
                             Shape plot = new PaintPlot();
-                            plot.addXCoord(event.getX());
-                            plot.addYCoord(event.getY());
+                            plot.addXCoord(event.getX()/size);
+                            plot.addYCoord(event.getY()/size);
                             actions.add(plot);
 
-                            plot.draw(gc);
+                            plot.draw(gc, size);
                         }
                         else if(shapeType == ShapeType.POLYGON && !polyEdit){
                             System.out.println("poly created");
                             Shape polygon = new PaintPolygon();
-                            polygon.addXCoord(event.getX());
-                            polygon.addYCoord(event.getY());
-                            polygon.addXCoord(event.getX());
-                            polygon.addYCoord(event.getY());
+                            polygon.addXCoord(event.getX()/size);
+                            polygon.addYCoord(event.getY()/size);
+                            polygon.addXCoord(event.getX()/size);
+                            polygon.addYCoord(event.getY()/size);
                             actions.add(polygon);
                             polyEdit = true;
 
-                            polygon.draw(gc);
+                            polygon.draw(gc, size);
                         }
                         else if(shapeType == ShapeType.POLYGON && polyEdit){
                             System.out.println("poly edited");
                             Shape polygon = (Shape) actions.get(actions.size() - 1);
 
-                            polygon.addXCoord(event.getX());
-                            polygon.addYCoord(event.getY());
-                            polygon.draw(gc);
+                            polygon.addXCoord(event.getX()/size);
+                            polygon.addYCoord(event.getY()/size);
+                            polygon.draw(gc, size);
 
                             actions.set(actions.size() - 1, polygon);
                             redraw();
@@ -81,9 +100,9 @@ public class PaintCanvas extends Canvas {
                     PaintPolygon polygon = (PaintPolygon) actions.get(actions.size() - 1);
                     if(polygon.getXCoords().size() > 1) {
                         System.out.println("poly Live");
-                        polygon.setLastCoord(event.getX(), event.getY());
+                        polygon.setLastCoord(event.getX()/size, event.getY()/size);
                         redraw();
-                        polygon.draw(gc);
+                        polygon.draw(gc, size);
                     }
                 }
             }
@@ -94,8 +113,9 @@ public class PaintCanvas extends Canvas {
 
                     @Override
                     public void handle(MouseEvent event) {
-                        double x = event.getX();
-                        double y = event.getY();
+                        System.out.println("Current square size is: "+size);
+                        double x = event.getX()/size;
+                        double y = event.getY()/size;
 
                         System.out.println("X: " + event.getX() + "\nY: " + event.getY());
 
@@ -119,12 +139,15 @@ public class PaintCanvas extends Canvas {
 
                     @Override
                     public void handle(MouseEvent event) {
-                        double x = event.getX();
-                        double y = event.getY();
+                        double x = event.getX()/size;
+                        double y = event.getY()/size;
 
                         if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE || shapeType == ShapeType.LINE){
                             redrawShape(x, y);
                         }
+
+                        System.out.println(event.getX());
+                        System.out.println(event.getY());
 
                         redraw();
                     }
@@ -134,8 +157,8 @@ public class PaintCanvas extends Canvas {
                 new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
-                        double x = event.getX();
-                        double y = event.getY();
+                        double x = event.getX()/size;
+                        double y = event.getY()/size;
                         if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE){
                             finalShape(x, y);
                         }
@@ -199,7 +222,7 @@ public class PaintCanvas extends Canvas {
 
         shape.setX2Coord(x);
         shape.setY2Coord(y);
-        shape.draw(gc);
+        shape.draw(gc, size);
     }
 
     private void finalShape(double x, double y){
@@ -234,14 +257,27 @@ public class PaintCanvas extends Canvas {
       }
 
     public void redraw(){
-        gc.clearRect(0,0, this.getWidth(), this.getHeight());
+        gc.clearRect(0,0, size, size);
+
+        if (getWidth() <= getHeight()) {
+            size = getWidth();
+        }
+        else {
+            size = getHeight();
+        }
+        System.out.println("Pixels are " + size);
+
+        //super.setHeight(getWidth());
+        //super.setWidth(getWidth());
+
         gc.setFill(Color.WHITE);
-        gc.fillRect(0, 0, pixels, pixels);
+        gc.fillRect(0, 0, size, size);
         gc.setFill(Color.TRANSPARENT);
         gc.setStroke(Color.BLACK);
 
         for(int index = 0; index < actions.size(); index++){
-            actions.get(index).draw(gc);
+
+            actions.get(index).draw(gc, size);
         }
     }
 }
