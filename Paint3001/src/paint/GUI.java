@@ -20,12 +20,10 @@ import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
 import java.io.InputStream;
 
-public class Main extends Application {
-    @Override
-    public void start(Stage stage) {
-        GUI window = new GUI();
-        /*
-        //compartmentalise later
+
+public class GUI {
+    public GUI () {
+        Stage stage = new Stage();
         StackPane rootPane = new StackPane();
         String base_style = "-fx-background-color: #02031E;";
         rootPane.setStyle(base_style);
@@ -151,6 +149,14 @@ public class Main extends Application {
                     }
                 });
 
+        new_btn.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(final ActionEvent e) {
+                        GUI newWindow = new GUI();
+                    }
+                });
+
         //create tool buttons pane
         ToolBar drawingTools = new ToolBar();
         window_container.setBottom(drawingTools);
@@ -258,11 +264,5 @@ public class Main extends Application {
 
         //Displaying the contents of the stage
         stage.show();
-        */
-    }
-
-
-    public static void main(String args[]) {
-        launch(args);
     }
 }
