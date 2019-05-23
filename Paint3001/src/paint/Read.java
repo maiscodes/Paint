@@ -5,11 +5,14 @@ import java.io.*;
 
 public class Read{
 
-    public static void read(PaintCanvas canvas, File file){
+    public static void read(PaintCanvas canvas, File file) throws vecExceptions, IOException{
+        if (!(file.getPath().endsWith(".vec"))) {
+            throw new vecExceptions("File not .VEC");
+        }
+        System.out.println(file.getPath());
         BufferedReader reader = null;
         double canvasSize = canvas.getHeight();
 
-        try {
             //File file = new File("files/test.vec");
             reader = new BufferedReader(new FileReader(file));
 
@@ -79,18 +82,10 @@ public class Read{
                     throw new vecExceptions("File contains unknown instruction");
                 }
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+            reader.close();
     }
 }
+
 
 class vecExceptions extends Exception{
     public vecExceptions(String s){
