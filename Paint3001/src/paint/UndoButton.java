@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class UndoButton extends Button {
     private ArrayList<Action> undoList = new ArrayList<>();
 
-    public UndoButton (PaintCanvas canvas, UndoHistoryListView<String> undo_stack) {
+    public UndoButton (PaintCanvas canvas) {
         super.setText("Undo");
 
         if (canvas.getActions().size() < 1) {
@@ -24,6 +24,8 @@ public class UndoButton extends Button {
 
                     @Override
                     public void handle(MouseEvent event) {
+                        canvas.undoAction();
+                        /*
                         ArrayList<Action> actions = canvas.getActions();
 
                         if (actions.size() > 0) {
@@ -41,12 +43,13 @@ public class UndoButton extends Button {
 
                         //check actions and enable/disable accordingly
 
-
+                        */
 
                     }
                 });
     }
 
+    /*
     public ArrayList<Action> getUndoList(){
         return undoList;
     }
@@ -57,6 +60,6 @@ public class UndoButton extends Button {
             undoList.add(newUndoList.get(a));
         }
     }
-
+*/
 }
 

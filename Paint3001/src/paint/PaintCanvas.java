@@ -15,6 +15,9 @@ public class PaintCanvas extends Canvas {
     private GraphicsContext gc;
     private ShapeType shapeType;
     private ArrayList<Action> actions = new ArrayList<>();
+    private ArrayList<Action> undoActions = new ArrayList<>();
+    private ArrayList<Action> redoActions = new ArrayList<>();
+    private UndoHistoryListView<String> undoStacks;
     private Color fillColour;
     private Color penColour;
     private boolean polyEdit;
@@ -38,6 +41,7 @@ public class PaintCanvas extends Canvas {
 
 
     public PaintCanvas(int pixels, UndoHistoryListView<String> undoStack) {
+        this.undoStacks = undoStack;
         this.size = pixels;
         super.setWidth(pixels);
         super.setHeight(pixels);
@@ -49,10 +53,6 @@ public class PaintCanvas extends Canvas {
         this.fillColour = Color.TRANSPARENT;
         this.penColour = Color.BLACK;
         this.polyEdit = false;
-
-        //Read.read(this);
-
-        //redraw();
 
         //Canvas events
         addEventHandler(MouseEvent.MOUSE_CLICKED,
@@ -164,6 +164,8 @@ public class PaintCanvas extends Canvas {
                         }
                         undoStack.updateHistoryListView(actions);
                         redraw();
+                        undoActions.clear();
+                        redoActions.clear();
                     }
                 });
     }
@@ -252,6 +254,62 @@ public class PaintCanvas extends Canvas {
           };
       }
 
+
+    public void undoAction() {
+
+        if (actions.size() > 0) {
+            undoActions.add(actions.get(actions.size() - 1));
+            ArrayList<Action> newActions = new ArrayList<Action>();
+            for (int a = 0; a< actions.size()-1; a++) {
+                newActions.add(actions.get(a));
+            }
+
+            System.out.println(undoActions);
+            updateActions(newActions);
+            redraw();
+            undoStacks.updateHistoryListView(newActions);
+        }
+
+
+    }
+
+    public void updateUndoList(ArrayList<Action> newUndoList){
+        undoActions.clear();
+        for (int a = 0; a < newUndoList.size(); a++) {
+            undoActions.add(newUndoList.get(a));
+        }
+    }
+
+    public void redoAction() {
+
+        if (undoActions.size() > 0) {
+            ArrayList<Action> newActions = new ArrayList<Action>();
+            ArrayList<Action> newUndoList = new ArrayList<Action>();
+            //newActions = actions;
+
+            for (int a = 0; a < actions.size(); a++) {
+                newActions.add(actions.get(a));
+            }
+            newActions.add(undoActions.get(undoActions.size() - 1));
+
+            System.out.println(undoActions);
+            updateActions(newActions);
+            redraw();
+            undoStacks.updateHistoryListView(newActions);
+
+            //update undoList
+            for (int u = 0; u < undoActions.size() - 1; u++) {
+                newUndoList.add(undoActions.get(u));
+            }
+
+            updateUndoList(newUndoList);
+
+
+
+        }
+    }
+
+
     public void redraw(){
         gc.clearRect(0,0, size, size);
 
@@ -262,9 +320,6 @@ public class PaintCanvas extends Canvas {
             size = getHeight();
         }
         System.out.println("Pixels are " + size);
-
-        //super.setHeight(getWidth());
-        //super.setWidth(getWidth());
 
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, size, size);
