@@ -15,7 +15,7 @@ public class SetFill extends Action {
 
     public String printInstruction(){
         String instruction;
-        if (fill_colour.getOpacity() == 0) {
+        if (fill_colour == Color.TRANSPARENT) {
             instruction = "FILL OFF";
         }
         else {
