@@ -222,8 +222,12 @@ public class PaintCanvas extends Canvas {
         shape.printInstruction();
     }
 
+    public void clearActions(){
+        this.actions.clear();
+    }
+
     public void updateActions(ArrayList<Action> actions) {
-          this.actions.clear();
+          clearActions();
           for (int a = 0; a < actions.size(); a++){
               this.actions.add(actions.get(a));
           };
