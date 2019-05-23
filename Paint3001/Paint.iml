@@ -22,5 +22,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="org.junit.jupiter:junit-jupiter-api:Release" level="project" />
+    <orderEntry type="library" name="opentest4j-1.1.1" level="project" />
   </component>
 </module>
