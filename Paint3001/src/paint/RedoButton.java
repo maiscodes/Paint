@@ -8,15 +8,18 @@ import java.util.ArrayList;
 public class RedoButton extends Button {
     private ArrayList<Action> undoList = new ArrayList<>();
 
-    public RedoButton (PaintCanvas canvas, UndoHistoryListView<String> undo_stack, UndoButton undo_btn) {
+    public RedoButton (PaintCanvas canvas) {
         super.setText("Redo");
 
 
         addEventHandler(MouseEvent.MOUSE_RELEASED,
                 new EventHandler<MouseEvent>() {
 
+
                     @Override
                     public void handle(MouseEvent event) {
+                        canvas.redoAction();
+                        /*
                         ArrayList<Action> actions = canvas.getActions();
 
                         if (undo_btn.getUndoList().size() > 0) {
@@ -40,6 +43,7 @@ public class RedoButton extends Button {
                             }
                             undo_btn.updateUndoList(newUndoList);
                         }
+                        */
 
                     }
                 });

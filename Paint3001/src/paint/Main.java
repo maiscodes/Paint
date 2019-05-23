@@ -23,12 +23,6 @@ import javafx.scene.control.ListView;
 import javafx.stage.FileChooser;
 
 import java.util.ArrayList;
-//import javafx.scene.shape.Line;
-//import javafx.scene.shape.Rectangle;
-//import javafx.scene.shape.Ellipse;
-//import javafx.scene.shape.Polygon;
-
-
 
 public class Main extends Application {
     @Override
@@ -86,8 +80,8 @@ public class Main extends Application {
         //** MOVED THE UNDO CONTAINER DOWN
 
         //ADDING THE UNDO STUFF HERE
-        UndoButton undo_btn = new UndoButton(canvas, undo_stack);
-        RedoButton redo_btn = new RedoButton(canvas, undo_stack, undo_btn);
+        UndoButton undo_btn = new UndoButton(canvas); // UndoButton undo_btn = new UndoButton(canvas, undo_stack);
+        RedoButton redo_btn = new RedoButton(canvas); //RedoButton redo_btn = new RedoButton(canvas, undo_stack, undo_btn);
         FlowPane undo_btn_container = new FlowPane();
         ObservableList undo_btn_contents = undo_btn_container.getChildren();
         undo_btn_contents.addAll(view_btn, undo_btn, redo_btn);
