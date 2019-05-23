@@ -6,10 +6,9 @@ import java.io.*;
 public class Read{
 
     public static void read(PaintCanvas canvas, File file) throws vecExceptions, IOException{
-        if (!(file.getPath().endsWith(".vec"))) {
+        if (!(file.getPath().toUpperCase().endsWith(".VEC"))) {
             throw new vecExceptions("File not .VEC");
         }
-        System.out.println(file.getPath());
         BufferedReader reader = null;
         double canvasSize = canvas.getHeight();
 
