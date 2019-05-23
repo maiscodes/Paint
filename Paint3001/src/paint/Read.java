@@ -74,7 +74,13 @@ public class Read{
                     canvas.addToActions(color);
                 }
                 else if(content[0].equals("FILL")){
-                    SetFill color = new SetFill(Color.valueOf(content[1]));
+                    SetFill color;
+                    if(content[1].equals("OFF")){
+                        color = new SetFill(Color.rgb(0,0,0,0));
+                    }
+                    else{
+                        color = new SetFill(Color.valueOf(content[1]));
+                    }
 
                     canvas.addToActions(color);
                 }

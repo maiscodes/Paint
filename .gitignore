@@ -5,3 +5,6 @@ Paint3001/.idea/workspace.xml
 *.xml
 *.class
 *.xml
+*.kotlin_module
+*.xml
+*.class
