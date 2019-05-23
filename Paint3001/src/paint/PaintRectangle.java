@@ -31,7 +31,20 @@ public class PaintRectangle extends Shape {
 
         //gc.fillRect(x, y, w, h); nope this line of code doesnt work if trans
         if (gc.getFill() == Color.TRANSPARENT) {
+            if (x > 1) {
+                x = 1;
+            }
+            if (y > 1) {
+                y = 1;
+            }
+            if (x < 0) {
+                x = 0;
+            }
+            if (y < 0) {
+                y = 0;
+            }
             gc.strokeRect(x * px, y * px, w * px, h * px);
+
         }
         else {
             gc.fillRect(x * px, y * px, w * px, h * px);

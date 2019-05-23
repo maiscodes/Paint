@@ -11,7 +11,6 @@ public abstract class Shape extends Action{
     protected ArrayList<Double> x_coord;
     protected ArrayList<Double> y_coord;
     //for now, have canvas px stored-  later when canvas class can get from there
-    protected Double canvas_px;
 
 
     public Shape(ShapeType shape_type){
@@ -33,33 +32,45 @@ public abstract class Shape extends Action{
     }
 
     public void addXCoord(double x){
+        x = checkXY(x);
         x_coord.add(x);
     }
 
     public void addYCoord(double y){
+        y = checkXY(y);
         y_coord.add(y);
+
     }
 
     public void setX1Coord(double x){
+        x = checkXY(x);
         x_coord.set(0, x);
     }
 
     public void setY1Coord(double y){
+        y = checkXY(y);
         y_coord.set(0, y);
     }
 
     public void setX2Coord(double x){
+        x = checkXY(x);
         x_coord.set(1, x);
     }
 
     public void setY2Coord(double y){
+        y = checkXY(y);
         y_coord.set(1, y);
     }
 
-    public void setCanvas_px(double pixels) {
-        canvas_px = pixels;
+    public double checkXY(double c) {
+        if (c > 1) {
+            return 1;
+        }
+        if (c < 0) {
+            return 0;
+        }
+        return c;
     }
-
     //public abstract void draw(GraphicsContext gc);
 
     //public abstract String printInstruction();

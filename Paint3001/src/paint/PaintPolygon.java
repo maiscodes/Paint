@@ -47,7 +47,7 @@ public class PaintPolygon extends Shape {
     }
 
     public void setLastCoord(double x, double y){
-        x_coord.set(x_coord.size() - 1, x);
-        y_coord.set(y_coord.size() - 1, y);
+        x_coord.set(x_coord.size() - 1, checkXY(x));
+        y_coord.set(y_coord.size() - 1, checkXY(y));
     }
 }
