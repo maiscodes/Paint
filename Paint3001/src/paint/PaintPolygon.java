@@ -37,7 +37,7 @@ public class PaintPolygon extends Shape {
         double y;
         String instruction = this.shape_type.toString();
 
-        for (int p = 0; p < x_coord.size() - 2; p++) {
+        for (int p = 0; p < x_coord.size() - 1; p++) {
             x = Double.valueOf(x_coord.get(p));
             y = Double.valueOf(y_coord.get(p));
             instruction += String.format(" %.2f %.2f", x, y);

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class WriteTest {
     PaintCanvas canvas;
     UndoHistoryListView<String> undo_stack;
-    String fileName = "file";
+    String fileName = "files/file";
     String testVEC = "RECTANGLE 0.02 0.02 0.08 0.08RECTANGLE 0.03 0.03 0.09 0.09FILL #FFFFFFRECTANGLE 0.12 0.02 0.18 0.08RECTANGLE 0.13 0.03 0.19 0.09";
 
     @BeforeEach
@@ -22,10 +22,10 @@ class WriteTest {
     @Test
     public void checkWriteExtension(){
         Shape line = new PaintLine();
-        line.addXCoord(10);
-        line.addXCoord(20);
-        line.addYCoord(10);
-        line.addYCoord(20);
+        line.addXCoord(0.02);
+        line.addXCoord(0.04);
+        line.addYCoord(0.02);
+        line.addYCoord(0.04);
         canvas.addToActions(line);
         canvas.addToActions(line);
 
@@ -44,10 +44,10 @@ class WriteTest {
     @Test
     public void checkWrongExtension(){
         Shape line = new PaintLine();
-        line.addXCoord(10);
-        line.addXCoord(20);
-        line.addYCoord(10);
-        line.addYCoord(20);
+        line.addXCoord(0.02);
+        line.addXCoord(0.04);
+        line.addYCoord(0.02);
+        line.addYCoord(0.04);
         canvas.addToActions(line);
         canvas.addToActions(line);
 
@@ -67,10 +67,10 @@ class WriteTest {
     @Test
     public void correctContent(){
         Shape line = new PaintLine();
-        line.addXCoord(10);
-        line.addXCoord(20);
-        line.addYCoord(10);
-        line.addYCoord(20);
+        line.addXCoord(0.02);
+        line.addXCoord(0.04);
+        line.addYCoord(0.02);
+        line.addYCoord(0.04);
         canvas.addToActions(line);
         canvas.addToActions(line);
 
