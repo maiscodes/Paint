@@ -1,7 +1,8 @@
-package paint;
+package Tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import paint.*;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,8 @@
-package paint;
+package Tests;
 import javafx.scene.canvas.Canvas;
 import org.junit.jupiter.api.*;
+import paint.*;
+
 import java.io.File;
 import java.util.ArrayList;
 
