@@ -62,7 +62,7 @@ public abstract class Shape extends Action{
         y_coord.set(1, y);
     }
 
-    public double checkXY(double c) {
+    double checkXY(double c) {
         if (c > 1) {
             return 1;
         }
