@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96455c55-23f9-406e-9e5d-27bd24181521" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Paint.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Paint.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/test.vec" beforeDir="false" afterPath="$PROJECT_DIR$/files/test.vec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/ShapeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/WriteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/WriteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintPlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Shape.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,123 +22,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/paint/ShapeTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="123" column="52" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#testXEllipse#0;class#ShapeTest#0" />
-                    <element signature="method#testPlot#0;class#ShapeTest#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/WriteTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="410">
-                  <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/ReadTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="152" selection-start-line="11" selection-start-column="152" selection-end-line="11" selection-end-column="152" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#465#466#0" expanded="true" />
-                    <element signature="e#522#523#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/files/test.vec">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2235">
-                  <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+                <state relative-caret-position="960">
+                  <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -149,17 +33,78 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/paint/PaintRectangle.java">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="360">
-                  <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+                  <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/paint/PaintPolygon.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/paint/PaintPolygon.java">
+            <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+                <state relative-caret-position="540">
+                  <caret line="115" column="29" lean-forward="true" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/paint/UndoHistoryListView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="9" column="57" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="59" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/paint/SetPen.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -179,6 +124,8 @@
     <findStrings>
       <find>read</find>
       <find>histor</find>
+      <find>size</find>
+      <find>preffere</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,19 +136,25 @@
       <list>
         <option value="$PROJECT_DIR$/src/module-info.java" />
         <option value="$PROJECT_DIR$/src/paint/SetFill.java" />
-        <option value="$PROJECT_DIR$/src/paint/Read.java" />
         <option value="$PROJECT_DIR$/src/paint/Main.java" />
-        <option value="$PROJECT_DIR$/src/paint/GUI.java" />
         <option value="$PROJECT_DIR$/files/test.vec" />
         <option value="$PROJECT_DIR$/src/paint/ReadTest.java" />
-        <option value="$PROJECT_DIR$/src/paint/WriteTest.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintPolygon.java" />
         <option value="$PROJECT_DIR$/src/paint/ShapeTest.java" />
+        <option value="$PROJECT_DIR$/src/paint/WriteTest.java" />
+        <option value="$PROJECT_DIR$/src/paint/Read.java" />
+        <option value="$PROJECT_DIR$/src/paint/vecExceptions.java" />
+        <option value="$PROJECT_DIR$/src/Tests/ColorTests.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintRectangle.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintPlot.java" />
+        <option value="$PROJECT_DIR$/src/paint/Shape.java" />
+        <option value="$PROJECT_DIR$/src/paint/GUI.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1420" />
+    <option name="width" value="1920" />
     <option name="height" value="1177" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -212,7 +165,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,11 +193,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="paint" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Paint3001" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Paint3001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,13 +212,19 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558767461639" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558834961145" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/paint" />
+      <recent name="$PROJECT_DIR$/imgs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -273,10 +238,57 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WriteTest">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="paint.Main" />
       <module name="Paint" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Paint" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColorTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColorTests.testFillColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Paint" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColorTests" />
+      <option name="METHOD_NAME" value="testFillColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColorTests.testFillOff" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Paint" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ColorTests" />
+      <option name="METHOD_NAME" value="testFillOff" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -285,61 +297,13 @@
       <module name="Paint" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="paint.*" />
+          <option name="PATTERN" value="Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="paint" />
-      <option name="MAIN_CLASS_NAME" value="paint.ShapeTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ShapeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShapeTest.testEllipse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Paint" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="paint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="paint" />
-      <option name="MAIN_CLASS_NAME" value="paint.ShapeTest" />
-      <option name="METHOD_NAME" value="testEllipse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShapeTest.testPolygon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Paint" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="paint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="paint" />
-      <option name="MAIN_CLASS_NAME" value="paint.ShapeTest" />
-      <option name="METHOD_NAME" value="testPolygon" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShapeTest.testXEllipse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Paint" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="paint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="paint" />
-      <option name="MAIN_CLASS_NAME" value="paint.ShapeTest" />
-      <option name="METHOD_NAME" value="testXEllipse" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -348,12 +312,12 @@
       <module name="Paint" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="paint.*" />
+          <option name="PATTERN" value="Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="paint" />
-      <option name="MAIN_CLASS_NAME" value="paint.WriteTest" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WriteTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -361,11 +325,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ColorTests" />
+        <item itemvalue="JUnit.ColorTests.testFillOff" />
+        <item itemvalue="JUnit.ColorTests.testFillColor" />
         <item itemvalue="JUnit.WriteTest" />
         <item itemvalue="JUnit.ShapeTest" />
-        <item itemvalue="JUnit.ShapeTest.testPolygon" />
-        <item itemvalue="JUnit.ShapeTest.testEllipse" />
-        <item itemvalue="JUnit.ShapeTest.testXEllipse" />
       </list>
     </recent_temporary>
   </component>
@@ -383,42 +347,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WriteTest - 2019.05.25 at 16h 18m 12s.xml">
+    <history-entry file="ShapeTest_testPolygon - 2019.05.25 at 16h 55m 54s.xml">
+      <configuration name="ShapeTest.testPolygon" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShapeTest - 2019.05.25 at 16h 56m 13s.xml">
+      <configuration name="ShapeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WriteTest - 2019.05.25 at 16h 57m 46s.xml">
       <configuration name="WriteTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest_testXEllipse - 2019.05.25 at 16h 27m 34s.xml">
-      <configuration name="ShapeTest.testXEllipse" configurationId="JUnit" />
+    <history-entry file="ColorTests_testFillColor - 2019.05.26 at 11h 22m 32s.xml">
+      <configuration name="ColorTests.testFillColor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest_testXEllipse - 2019.05.25 at 16h 30m 26s.xml">
-      <configuration name="ShapeTest.testXEllipse" configurationId="JUnit" />
+    <history-entry file="ColorTests_testFillColor - 2019.05.26 at 11h 23m 19s.xml">
+      <configuration name="ColorTests.testFillColor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest_testXEllipse - 2019.05.25 at 16h 31m 49s.xml">
-      <configuration name="ShapeTest.testXEllipse" configurationId="JUnit" />
+    <history-entry file="ColorTests - 2019.05.26 at 11h 24m 51s.xml">
+      <configuration name="ColorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest_testEllipse - 2019.05.25 at 16h 42m 55s.xml">
-      <configuration name="ShapeTest.testEllipse" configurationId="JUnit" />
+    <history-entry file="ColorTests_testFillOff - 2019.05.26 at 11h 26m 16s.xml">
+      <configuration name="ColorTests.testFillOff" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest - 2019.05.25 at 16h 44m 20s.xml">
-      <configuration name="ShapeTest" configurationId="JUnit" />
+    <history-entry file="ColorTests_testFillOff - 2019.05.26 at 11h 26m 29s.xml">
+      <configuration name="ColorTests.testFillOff" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest - 2019.05.25 at 16h 45m 23s.xml">
-      <configuration name="ShapeTest" configurationId="JUnit" />
+    <history-entry file="ColorTests - 2019.05.26 at 11h 27m 54s.xml">
+      <configuration name="ColorTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTest - 2019.05.25 at 16h 45m 36s.xml">
-      <configuration name="ShapeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShapeTest - 2019.05.25 at 16h 50m 18s.xml">
-      <configuration name="ShapeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShapeTest - 2019.05.25 at 16h 52m 09s.xml">
-      <configuration name="ShapeTest" configurationId="JUnit" />
+    <history-entry file="ColorTests - 2019.05.26 at 11h 28m 16s.xml">
+      <configuration name="ColorTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1177" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20490094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2046875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -427,7 +391,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17572464" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17540687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -469,25 +433,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/oval.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/paint/hexy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/square2.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -496,29 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2235">
-          <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/hexy.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/files/test.vec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -526,65 +456,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/ReadTest.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="152" selection-start-line="11" selection-start-column="152" selection-end-line="11" selection-end-column="152" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/WriteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+        <state relative-caret-position="495">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/ShapeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Tests/ReadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="123" column="52" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="52" />
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#testXEllipse#0;class#ShapeTest#0" />
-            <element signature="method#testPlot#0;class#ShapeTest#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/vecExceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/WriteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/ShapeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" lean-forward="true" selection-end-line="160" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#ShapeTest#0" />
+            <element signature="method#testLine#0;class#ShapeTest#0" />
+            <element signature="method#testPlot#0;class#ShapeTest#0" />
+            <element signature="method#testPolygon#0;class#ShapeTest#0" />
+            <element signature="method#testRectangle#0;class#ShapeTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/ColorTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/SetPen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintRectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintPolygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        <state relative-caret-position="540">
+          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/RedoButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/UndoHistoryListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="115" column="29" lean-forward="true" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
