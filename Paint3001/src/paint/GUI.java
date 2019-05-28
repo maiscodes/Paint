@@ -22,86 +22,175 @@ import java.io.InputStream;
 
 
 public class GUI {
+    private Stage stage;
+    private Scene scene;
+    private StackPane rootPane;
+    private BorderPane window_container;
+    private FlowPane menu_container;
+
+    private HBox buttonBar;
+    private Button open_btn;
+    private Button save_btn;
+    private Button new_btn;
+    private Label menu_lbl;
+    private ObservableList menuButtons;
+
+    private PaintCanvas canvas;
+    private PaintCanvas tempCanvas;
+    private Pane canvasPane;
+
+    private VBox drawingtoolbar;
+    private ToolBar drawingTools;
+    private HBox buttonBar2;
+    private ToolBar toolBar;
+    private Button line_btn;
+    private Button plot_btn;
+    private Button rect_btn;
+    private Button ellipse_btn;
+    private Button polygon_btn;
+
+    private VBox pencolour_container;
+    private Label pencolour_lbl;
+    private ColorPicker pencolour_picker;
+    private ObservableList pencolours_list;
+    private VBox shapefill_container;
+    private Label shapefill_lbl;
+    private ColorPicker shapefill_picker;
+    private ObservableList shapefill_list;
+
+    private VBox undo_container;
+    private ObservableList undo_container_contents;
+    private  Label undo_lbl;
+    private UndoHistoryListView<String> undo_stack;
+    private ViewActionsButton view_btn;
+    private UndoButton undo_btn;
+    private RedoButton redo_btn;
+    private FlowPane undo_btn_container;
+    private ObservableList undo_btn_contents;
+
+    final FileChooser fileChooser = new FileChooser();
+
+
     public GUI () {
-        Stage stage = new Stage();
-        StackPane rootPane = new StackPane();
-        String base_style = "-fx-background-color: #02031E;";
-        rootPane.setStyle(base_style);
-        //Instantiating the main class
-        BorderPane window_container = new BorderPane();
-        window_container.setId("background");
+        stage = new Stage();
+        createUndoStack();
+        createMenuBar();
+        createCanvases();
+        createUndoButtons();
+        createToolButtons();
+        createColourPickerTools();
+        addEventHandlers();
+        putAllDrawingToolsTogether();
+        putGUIComponentsToWindow();
+        setStyles();
+        setupScene();
+        stage.show();
+    }
 
-        // create menu pane
-        FlowPane menu_container = new FlowPane();
-        ToolBar toolBar = new ToolBar();
-        window_container.setTop(toolBar);
-
-        final FileChooser fileChooser = new FileChooser();
-
-        // creating the list view for the undo stack, maybe store shapes?
-        VBox undo_container = new VBox();
-        Label undo_lbl = new Label("Undo History");
-        UndoHistoryListView<String> undo_stack = new UndoHistoryListView<String>();
-        //ObservableList<String> action_list = FXCollections.observableArrayList("Instruction 1", "Instruction 2", "Instruction 3");
-        //undo_stack.setItems(action_list);
-        ObservableList undo_container_contents = undo_container.getChildren();
-        //undo_container_contents.addAll(undo_lbl, undo_stack);
-
-        //additional method to set style son!
-        String style="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color: linear-gradient(to bottom, derive(rgb(39, 40, 40),-30%), derive(rgb(39, 40, 40),-60%)),        linear-gradient(to bottom, rgb(74, 75, 78)2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
-        menu_container.setStyle(style);
-        rootPane.getChildren().addAll(window_container, menu_container);
-
-        HBox buttonBar = new HBox();
+    private void createMenuBar() {
+        toolBar = new ToolBar();
+        menu_container = new FlowPane();
+        buttonBar = new HBox();
         buttonBar.getStyleClass().setAll("segmented-button-bar");
-        Button open_btn = new Button("Open");
-        Button save_btn = new Button("Save");
-        Button new_btn = new Button("New");
-        Label menu_lbl = new Label("Menu");
+        open_btn = new Button("Open");
+        save_btn = new Button("Save");
+        new_btn = new Button("New");
+        menu_lbl = new Label("Menu");
         open_btn.getStyleClass().addAll("first");
         new_btn.getStyleClass().addAll("last", "capsule");
         buttonBar.getChildren().addAll(open_btn, save_btn, new_btn);
-        toolBar.getItems().addAll( buttonBar);
+        toolBar.getItems().addAll(buttonBar);
 
-        ObservableList menuButtons = menu_container.getChildren();
+        menuButtons = menu_container.getChildren();
         menuButtons.addAll(menu_lbl, open_btn, save_btn, new_btn);
+    }
 
-        // create canvas, coordinates works from top left
-        PaintCanvas canvas = new PaintCanvas(500, undo_stack);
-        PaintCanvas tempCanvas = new PaintCanvas(500, undo_stack);
-        Pane canvasPane = new Pane();
+    private void createUndoStack() {
+        undo_lbl = new Label("Undo History");
+        undo_stack = new UndoHistoryListView<String>();
+    }
 
-        //** RESIZABLE
+    private void createUndoButtons(){
+        view_btn = new ViewActionsButton(canvas, tempCanvas, undo_stack);
+        undo_btn = new UndoButton(canvas);
+        redo_btn = new RedoButton(canvas);
+
+        undo_btn_container = new FlowPane();
+        undo_btn_contents = undo_btn_container.getChildren();
+        undo_btn_contents.addAll(view_btn, undo_btn, redo_btn);
+        undo_container = new VBox();
+        undo_container_contents = undo_container.getChildren();
+        undo_container_contents.addAll(undo_lbl, undo_stack, undo_btn_container);
+    }
+
+    private void createCanvases(){
+        canvasPane = new Pane();
+        canvas = new PaintCanvas(500, undo_stack);
+        tempCanvas = new PaintCanvas(500, undo_stack);
+
+        // make resizeable
         canvas.widthProperty().bind(canvasPane.widthProperty());
         canvas.heightProperty().bind(canvasPane.heightProperty());
-
-        // ***
         tempCanvas.widthProperty().bind(canvasPane.widthProperty());
         tempCanvas.heightProperty().bind(canvasPane.heightProperty());
 
-        //**
+        //add to a pane
         canvasPane.getChildren().add(canvas);
         canvasPane.getChildren().add(tempCanvas);
         canvas.toFront();
+    }
 
-        //Undo button here
-        ViewActionsButton view_btn = new ViewActionsButton(canvas, tempCanvas, undo_stack);
-        //** MOVED THE UNDO CONTAINER DOWN
-
-        //ADDING THE UNDO STUFF HERE
-        UndoButton undo_btn = new UndoButton(canvas); // UndoButton undo_btn = new UndoButton(canvas, undo_stack);
-        RedoButton redo_btn = new RedoButton(canvas); //RedoButton redo_btn = new RedoButton(canvas, undo_stack, undo_btn);
-        FlowPane undo_btn_container = new FlowPane();
-        ObservableList undo_btn_contents = undo_btn_container.getChildren();
-        undo_btn_contents.addAll(view_btn, undo_btn, redo_btn);
-
-        undo_container_contents.addAll(undo_lbl, undo_stack, undo_btn_container);
+    private void createToolButtons(){
+        line_btn = new PaintButton(ShapeType.LINE, canvas);
+        InputStream input = getClass().getResourceAsStream("line.png");
+        Image image = new Image(input, 40, 40, true, true);
+        ImageView imageView = new ImageView(image);
+        line_btn.setGraphic(imageView);
 
 
+        plot_btn = new PaintButton(ShapeType.PLOT, canvas);
+        InputStream input2 = getClass().getResourceAsStream("dot2.jpg");
+        Image image2 = new Image(input2, 40, 40, true, true);
+        ImageView imageView2 = new ImageView(image2);
+        plot_btn.setGraphic(imageView2);
+
+        rect_btn = new PaintButton(ShapeType.RECTANGLE, canvas);
+        InputStream input3 = getClass().getResourceAsStream("square2.png");
+        Image image3 = new Image(input3, 58, 58, true, true);
+        ImageView imageView3 = new ImageView(image3);
+        rect_btn.setGraphic(imageView3);
 
 
-        //END UNDO STUFF
+        ellipse_btn = new PaintButton(ShapeType.ELLIPSE, canvas);
+        InputStream input4 = getClass().getResourceAsStream("oval.png");
+        Image image4 = new Image(input4, 50, 50, true, true);
+        ImageView imageView4 = new ImageView(image4);
+        ellipse_btn.setGraphic(imageView4);
 
+        polygon_btn = new PaintButton(ShapeType.POLYGON, canvas);
+        InputStream input5 = getClass().getResourceAsStream("hexy.png");
+        Image image5 = new Image(input5, 40, 40, true, true);
+        ImageView imageView5 = new ImageView(image5);
+        polygon_btn.setGraphic(imageView5);
+    }
+
+    public void createColourPickerTools(){
+        pencolour_container = new VBox();
+        pencolour_lbl = new Label("Pen Colour");
+        pencolour_picker = new PenColourPicker(canvas, undo_stack);
+
+        // add the pen colour components to the container
+        pencolours_list = pencolour_container.getChildren();
+        pencolours_list.addAll(pencolour_lbl, pencolour_picker);
+
+        shapefill_container = new VBox();
+        shapefill_lbl = new Label("Shape Fill Colour");
+        shapefill_picker = new FillColourPicker(canvas, undo_stack);
+        shapefill_list = shapefill_container.getChildren();
+        shapefill_list.addAll(shapefill_lbl, shapefill_picker);
+    }
+
+    private void addEventHandlers() {
         open_btn.setOnAction(
                 new EventHandler<ActionEvent>() {
                     @Override
@@ -156,113 +245,59 @@ public class GUI {
                         GUI newWindow = new GUI();
                     }
                 });
+    }
 
-        //create tool buttons pane
-        ToolBar drawingTools = new ToolBar();
-        window_container.setBottom(drawingTools);
-
-        //HBox drawingtools_container = new HBox();
-        HBox buttonBar2 = new HBox();
+    private void putAllDrawingToolsTogether(){
+        drawingTools = new ToolBar();
+        buttonBar2 = new HBox();
         buttonBar2.getStyleClass().setAll("segmented-button-bar-2");
-
-        // create the buttons
-        Button line_btn = new PaintButton(ShapeType.LINE, canvas);
-        InputStream input = getClass().getResourceAsStream("line.png");
-        Image image = new Image(input, 40, 40, true, true);
-        ImageView imageView = new ImageView(image);
-        line_btn.setGraphic(imageView);
-
-
-        Button plot_btn = new PaintButton(ShapeType.PLOT, canvas);
-        InputStream input2 = getClass().getResourceAsStream("dot2.jpg");
-        Image image2 = new Image(input2, 40, 40, true, true);
-        ImageView imageView2 = new ImageView(image2);
-        plot_btn.setGraphic(imageView2);
-
-        Button rect_btn = new PaintButton(ShapeType.RECTANGLE, canvas);
-        InputStream input3 = getClass().getResourceAsStream("square2.png");
-        Image image3 = new Image(input3, 58, 58, true, true);
-        ImageView imageView3 = new ImageView(image3);
-        rect_btn.setGraphic(imageView3);
-
-
-        Button ellipse_btn = new PaintButton(ShapeType.ELLIPSE, canvas);
-        InputStream input4 = getClass().getResourceAsStream("oval.png");
-        Image image4 = new Image(input4, 50, 50, true, true);
-        ImageView imageView4 = new ImageView(image4);
-        ellipse_btn.setGraphic(imageView4);
-
-        Button polygon_btn = new PaintButton(ShapeType.POLYGON, canvas);
-        InputStream input5 = getClass().getResourceAsStream("hexy.png");
-        Image image5 = new Image(input5, 40, 40, true, true);
-        ImageView imageView5 = new ImageView(image5);
-        polygon_btn.setGraphic(imageView5);
-
-        // add the buttons in two columns
-        VBox toolbar_c1 = new VBox();
-        VBox toolbar_c2 = new VBox();
-
-        //ObservableList c1_tools = toolbar_c1.getChildren();
-        //c1_tools.addAll(line_btn, plot_btn, rect_btn);
-
         buttonBar2.getChildren().addAll(line_btn, plot_btn, rect_btn, ellipse_btn, polygon_btn);
         drawingTools.getItems().addAll(buttonBar2);
+        Label drawingtools_lbl = new Label("Drawing Tools");
+        drawingtoolbar = new VBox();
+        ObservableList drawingtoolbar_contents = drawingtoolbar.getChildren();
+        drawingtoolbar_contents.addAll(drawingtools_lbl, pencolour_container, shapefill_container, undo_container, view_btn);
+    }
 
-        //ObservableList c2_tools = toolbar_c2.getChildren();
-        //c2_tools.addAll(ellipse_btn, polygon_btn);
+    private void putGUIComponentsToWindow(){
+        rootPane = new StackPane();
+        window_container = new BorderPane();
+        window_container.setId("background");
 
-        //ObservableList toolbar_btns = drawingtools_container.getChildren();
-        //toolbar_btns.addAll(toolbar_c1, toolbar_c2);
+        window_container.setTop(toolBar);
+        rootPane.getChildren().addAll(window_container, menu_container);
+
+        window_container.setBottom(drawingTools);
+
+        window_container.setTop(menu_container);
+
+        window_container.setCenter(canvasPane);
+
+        window_container.setRight(drawingtoolbar);
+    }
+
+    private void setupScene(){
+        scene = new Scene(rootPane);
+
+        stage.setTitle("Paint3000");
+
+        stage.setScene(scene);
+    }
+
+    private void setStyles() {
+        String base_style = "-fx-background-color: #02031E;";
+        rootPane.setStyle(base_style);
+
+        String style="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color: linear-gradient(to bottom, derive(rgb(39, 40, 40),-30%), derive(rgb(39, 40, 40),-60%)),        linear-gradient(to bottom, rgb(74, 75, 78)2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
+        menu_container.setStyle(style);
+
+        String style1="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color: linear-gradient(to bottom, derive(rgb(39, 40, 40),-30%), derive(rgb(39, 40, 40),-60%)),        linear-gradient(to bottom, rgb(74, 75, 78)2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
+        drawingtoolbar.setStyle(style1);
 
         String style0="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color:  #04052E; -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
         drawingTools.setStyle(style0);
 
-
-        // create the colour tools container, can create function to return based on name
-        VBox pencolour_container = new VBox();
-        Label pencolour_lbl = new Label("Pen Colour");
-        ColorPicker pencolour_picker = new PenColourPicker(canvas, undo_stack);
-
-        // add the pen colour components to the container
-        ObservableList pencolours_list = pencolour_container.getChildren();
-        pencolours_list.addAll(pencolour_lbl, pencolour_picker);
-
-        VBox shapefill_container = new VBox();
-        Label shapefill_lbl = new Label("Shape Fill Colour");
-        ColorPicker shapefill_picker = new FillColourPicker(canvas, undo_stack);
-        ObservableList shapefill_list = shapefill_container.getChildren();
-        shapefill_list.addAll(shapefill_lbl, shapefill_picker);
-
-
-
-        // now put all the tools together
-        Label drawingtools_lbl = new Label("Drawing Tools");
-        VBox toolbar = new VBox();
-        //looks like you can give elements ids and style using css file
-        String style1="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color: linear-gradient(to bottom, derive(rgb(39, 40, 40),-30%), derive(rgb(39, 40, 40),-60%)),        linear-gradient(to bottom, rgb(74, 75, 78)2%, rgb(39, 40, 40) 98%); -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
-        toolbar.setStyle(style1);
-
-        ObservableList toolbar_contents = toolbar.getChildren();
-        //toolbar_contents.addAll(drawingtools_lbl, drawingtools_container, pencolour_container, shapefill_container, undo_container, view_btn);
-        toolbar_contents.addAll(drawingtools_lbl, pencolour_container, shapefill_container, undo_container, view_btn);
-
-
-        window_container.setTop(menu_container);
-        //window_container.setBottom(new TextField("Tools"));
-
-        window_container.setCenter(canvasPane);
-
-        window_container.setRight(toolbar);
-        //Creating a scene object
-        Scene scene = new Scene(rootPane);
-
-        //Setting title to the Stage
-        stage.setTitle("Paint3000");
-
-        //Adding scene to the stage
-        stage.setScene(scene);
-
-        //Displaying the contents of the stage
-        stage.show();
     }
+
+
 }
