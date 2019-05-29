@@ -195,17 +195,7 @@ public class GUI {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(final ActionEvent e) {
-                        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
-                        File file = fileChooser.showOpenDialog(stage);
-                        if (file != null) {
-                            try{
-                                Read.read(canvas, file);
-                            } catch (Exception error){
-                                error.printStackTrace();
-                            }
-                            canvas.redraw();
-                            undo_stack.updateHistoryListView(canvas.getActions());
-                        }
+                        openVECfile();
                     }
                 });
 
@@ -215,15 +205,7 @@ public class GUI {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(final ActionEvent e) {
-                        FileChooser fileChooser = new FileChooser();
-                        fileChooser.setTitle("Save Drawing");
-                        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("VEC files (*.vec)", "*.vec");
-                        fileChooser.getExtensionFilters().add(extFilter);
-
-                        File file = fileChooser.showSaveDialog(stage);
-                        if (file != null) {
-                            Write.write(canvas, file);
-                        }
+                        saveVECfile();
                     }
                 });
 
@@ -235,6 +217,23 @@ public class GUI {
                             canvas.completePolygon();
                             System.out.println("Poly done!");
                         }
+                        if(t.getCode()== KeyCode.Z){
+                            canvas.undoAction();
+                            System.out.println("Action undone!");
+                        }
+                        if(t.getCode()== KeyCode.Y){
+                            canvas.redoAction();
+                            System.out.println("Action redone!");
+                        }
+                        if(t.getCode()== KeyCode.N){
+                            openNewWindow();
+                        }
+                        if(t.getCode()== KeyCode.S){
+                            saveVECfile();
+                        }
+                        if(t.getCode()== KeyCode.O){
+                            openVECfile();
+                        }
                     }
                 });
 
@@ -242,7 +241,7 @@ public class GUI {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(final ActionEvent e) {
-                        GUI newWindow = new GUI();
+                        openNewWindow();
                     }
                 });
     }
@@ -297,6 +296,37 @@ public class GUI {
         String style0="-fx-base: rgb(39, 40, 40); -fx-font-size: 12pt; -fx-background-color:  #04052E; -fx-background-insets: 0, 0 0 1 0; -fx-padding: .9em 0.416667em .9em 0.416667em; -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);";
         drawingTools.setStyle(style0);
 
+    }
+
+    private void openVECfile(){
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
+        File file = fileChooser.showOpenDialog(stage);
+        if (file != null) {
+            try{
+                Read.read(canvas, file);
+            } catch (Exception error){
+                error.printStackTrace();
+            }
+            canvas.redraw();
+            undo_stack.updateHistoryListView(canvas.getActions());
+        }
+
+    }
+
+    private void saveVECfile(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Drawing");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("VEC files (*.vec)", "*.vec");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        File file = fileChooser.showSaveDialog(stage);
+        if (file != null) {
+            Write.write(canvas, file);
+        }
+    }
+
+    private void openNewWindow(){
+        GUI newWindow = new GUI();
     }
 
 
