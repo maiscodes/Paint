@@ -22,8 +22,6 @@ public class PaintCanvas extends Canvas {
     private Color penColour;
     private boolean polyEdit;
 
-    // trying to make it resizable
-
     @Override
     public double prefWidth(double height) {
         return getWidth();
@@ -39,22 +37,75 @@ public class PaintCanvas extends Canvas {
         return true;
     }
 
-
+    /**
+     * Creates a square canvas of certain size given its size in pixels
+     * and also undo stack GUI component which it updates after
+     * a new shape is drawn.
+     *
+     * @param pixels number representing the size of the canvas
+     * @param undoStack list view representing the actions of the user
+     */
     public PaintCanvas(int pixels, UndoHistoryListView<String> undoStack) {
         this.undoStacks = undoStack;
         this.size = pixels;
         super.setWidth(pixels);
         super.setHeight(pixels);
+
+        // Make canvas resizable
         widthProperty().addListener(evt -> redraw());
         heightProperty().addListener(evt -> redraw());
 
+        // Set the initial pen settings
         this.gc = this.getGraphicsContext2D();
         this.shapeType = ShapeType.LINE;
         this.fillColour = Color.TRANSPARENT;
         this.penColour = Color.BLACK;
         this.polyEdit = false;
 
-        //Canvas events
+        // Let the user draw the shapes with the mouse events
+        addMouseClickEventHandler();
+        addMouseMoveEventHandler();
+        addMousePressedEventHandler();
+        addMouseDraggedEventHandler();
+        addMouseReleasedEventHandler();
+    }
+
+    /**
+     * Initialise shapes when user makes first mouse click on canvas
+     */
+    public void addMousePressedEventHandler(){
+        addEventHandler(MouseEvent.MOUSE_PRESSED,
+                new EventHandler<MouseEvent>() {
+
+                    @Override
+                    public void handle(MouseEvent event) {
+                        System.out.println("Current square size is: "+size);
+                        double x = event.getX()/size;
+                        double y = event.getY()/size;
+
+                        System.out.println("X: " + event.getX() + "\nY: " + event.getY());
+
+                        if(shapeType == ShapeType.RECTANGLE){
+                            Shape rect = new PaintRectangle();
+                            initShape(rect, x, y);
+                        }
+                        else if(shapeType == ShapeType.ELLIPSE){
+                            Shape ellipse = new PaintEllipse();
+                            initShape(ellipse, x, y);
+                        }
+                        else if(shapeType == ShapeType.LINE){
+                            Shape line = new PaintLine();
+                            initShape(line, x, y);
+                        }
+                    }
+                });
+    }
+
+    /**
+     * Add x and y coordinates to the shapes when the user continues to
+     * click on the canvas and draw when necessary
+     */
+    private void addMouseClickEventHandler(){
         addEventHandler(MouseEvent.MOUSE_CLICKED,
                 new EventHandler<MouseEvent>() {
                     @Override
@@ -64,6 +115,7 @@ public class PaintCanvas extends Canvas {
                             plot.addXCoord(event.getX()/size);
                             plot.addYCoord(event.getY()/size);
                             actions.add(plot);
+                            undoStacks.updateHistoryListView(actions);
 
                             plot.draw(gc, size);
                         }
@@ -91,8 +143,14 @@ public class PaintCanvas extends Canvas {
                             redraw();
                         }
                     }
-        });
+                });
 
+    }
+
+    /**
+     * Add event to let the user to see change to their polygon in real time
+     */
+    public void addMouseMoveEventHandler(){
         addEventHandler(MouseEvent.MOUSE_MOVED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -107,33 +165,14 @@ public class PaintCanvas extends Canvas {
                 }
             }
         });
+    }
 
-        addEventHandler(MouseEvent.MOUSE_PRESSED,
-                new EventHandler<MouseEvent>() {
 
-                    @Override
-                    public void handle(MouseEvent event) {
-                        System.out.println("Current square size is: "+size);
-                        double x = event.getX()/size;
-                        double y = event.getY()/size;
-
-                        System.out.println("X: " + event.getX() + "\nY: " + event.getY());
-
-                        if(shapeType == ShapeType.RECTANGLE){
-                            Shape rect = new PaintRectangle();
-                            initShape(rect, x, y);
-                        }
-                        else if(shapeType == ShapeType.ELLIPSE){
-                            Shape ellipse = new PaintEllipse();
-                            initShape(ellipse, x, y);
-                        }
-                        else if(shapeType == ShapeType.LINE){
-                            Shape line = new PaintLine();
-                            initShape(line, x, y);
-                        }
-                    }
-                });
-
+    /**
+     * Add event to let users see their RECTANGLE, ELLIPSE
+     * and LINE shapes in real time as they draw
+     */
+    public void addMouseDraggedEventHandler(){
         addEventHandler(MouseEvent.MOUSE_DRAGGED,
                 new EventHandler<MouseEvent>() {
 
@@ -152,7 +191,14 @@ public class PaintCanvas extends Canvas {
                         redraw();
                     }
                 });
+    }
 
+    /**
+     * Add event so when user stops drawing, a new shape is added to the list of actions.
+     * At the same time, the undo history stack is updated to show user new listing
+     * and the previous history stacks are erased.
+     */
+    public void addMouseReleasedEventHandler(){
         addEventHandler(MouseEvent.MOUSE_RELEASED,
                 new EventHandler<MouseEvent>() {
                     @Override
@@ -162,7 +208,7 @@ public class PaintCanvas extends Canvas {
                         if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE){
                             finalShape(x, y);
                         }
-                        undoStack.updateHistoryListView(actions);
+                        undoStacks.updateHistoryListView(actions);
                         redraw();
                         undoActions.clear();
                         redoActions.clear();
@@ -170,46 +216,75 @@ public class PaintCanvas extends Canvas {
                 });
     }
 
+    /**
+     * Returns the graphics context of the canvas
+     * @return gc
+     */
     public GraphicsContext getGraphicsContext() {
         return gc;
     }
 
-    public void completePolygon(){
-        if(polyEdit){
-            this.polyEdit = false;
-            Shape polygon = (Shape) actions.get(actions.size() - 1);
-            polygon.addXCoord(polygon.getXCoords().get(0));
-            polygon.addYCoord(polygon.getYCoords().get(0));
-
-            actions.set(actions.size() - 1, polygon);
-            polygon.printInstruction();
-        }
-    }
-
+    /**
+     * Returns the current shape type of the canvas
+     * @return ShapeType
+     */
     public ShapeType getShapeType() {
         return this.shapeType;
     }
 
+    /**
+     * Sets the shape type of the canvas
+     * @param shapeType
+     */
     public void setShapeType(ShapeType shapeType) {
         this.shapeType = shapeType;
     }
 
+    /**
+     * Returns list of actions of the canvas
+     * @return ArrayList<Action>
+     */
     public ArrayList<Action> getActions() {
         return this.actions;
     }
 
+    /**
+     * Given an action object, an addition is made to the
+     * canvas's current list of actions with the specified action
+     * @param action an action object such as SetFill, SetLine, PaintPlot and so on.
+     */
     public void addToActions(Action action) {
         actions.add(action);
     }
 
+    /**
+     * Given the colour, the canvas's fill colour property is
+     * set to the specified colour
+     * @param colour colour object representing shape fill such as a HEX colour value
+     */
     public void setFillColour(Color colour){
         this.fillColour = colour;
     }
+
+    /**
+     * Given the colour, the canvas's pen colour property is
+     * set to the specified colour
+     * @param colour colour object for the pen such as a HEX colour value
+     */
 
     public void setPenColour(Color colour){
         this.penColour = colour;
     }
 
+    /**
+     * Given a shape object, and initial x and y coordinate, an initial shape
+     * is created with 2 pairs of coordinates and added to the list.
+     * @param shape shape object such as PaintPlot, PaintRectangle
+     * @param x number representing the initial x coordinate of the shape
+     *         as a ratio relative to the canvas size
+     * @param y number representing the initial y coordinate of the shape
+     *          as a ratio relative to the canvas size
+     */
     private void initShape(Shape shape, double x, double y){
         shape.addXCoord(x);
         shape.addYCoord(y);
@@ -219,6 +294,12 @@ public class PaintCanvas extends Canvas {
         actions.add(shape);
     }
 
+    /**
+     * Given x and y coordinates the second lot of coordinates of a
+     * shape such as RECCTANGLE and ELLIPSE are redrawn
+     * @param x number of the second x coordinate as a ratio
+     * @param y number of the second y coordinate as a ratio
+     */
     private void redrawShape(double x, double y){
         Shape shape = (Shape) actions.get(actions.size() - 1);
 
@@ -247,10 +328,33 @@ public class PaintCanvas extends Canvas {
         shape.printInstruction();
     }
 
+    /**
+     * Closes the polygon shape using its initial coordinates.
+     */
+    public void completePolygon(){
+        if(polyEdit){
+            this.polyEdit = false;
+            Shape polygon = (Shape) actions.get(actions.size() - 1);
+            polygon.addXCoord(polygon.getXCoords().get(0));
+            polygon.addYCoord(polygon.getYCoords().get(0));
+
+            actions.set(actions.size() - 1, polygon);
+            polygon.printInstruction();
+        }
+    }
+
+    /**
+     * Erases all of the actions stored in the actions property.
+     */
     public void clearActions(){
         this.actions.clear();
     }
 
+    /**
+     * Updates the actions property.
+     * @param actions new actions list which usually has additions
+     *                or removals
+     */
     public void updateActions(ArrayList<Action> actions) {
           clearActions();
           for (int a = 0; a < actions.size(); a++){
@@ -258,7 +362,11 @@ public class PaintCanvas extends Canvas {
           };
       }
 
-
+    /**
+     * Updates the actions property by deleting the most recent
+     * action object and redraws the canvas while also updating
+     * the undo stack.
+     */
     public void undoAction() {
 
         if (actions.size() > 0) {
@@ -277,6 +385,12 @@ public class PaintCanvas extends Canvas {
 
     }
 
+    /**
+     * Given the new undo list the undoActions property is set
+     * the the specified values.
+     * @param newUndoList new undoList which has either additions
+     *                    or removals from the current undoActions
+     */
     public void updateUndoList(ArrayList<Action> newUndoList){
         undoActions.clear();
         for (int a = 0; a < newUndoList.size(); a++) {
@@ -284,6 +398,11 @@ public class PaintCanvas extends Canvas {
         }
     }
 
+
+    /**
+     * Moves the most recent action object stored in the undoActions back to
+     * masters action list and redraws the canvas.
+     */
     public void redoAction() {
 
         if (undoActions.size() > 0) {
@@ -313,7 +432,9 @@ public class PaintCanvas extends Canvas {
         }
     }
 
-
+    /**
+     * Redraw the canvas using the current actions list.
+     */
     public void redraw(){
         gc.clearRect(0,0, size, size);
 
