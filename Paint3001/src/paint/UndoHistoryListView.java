@@ -11,6 +11,11 @@ public class UndoHistoryListView<String> extends ListView {
     public UndoHistoryListView() {
     }
 
+    /**
+     * Given a list of actions the history list view will update
+     * its values with the specified actions.
+     * @param actions ArrayList<Action> representing the new actions
+     */
     public void updateHistoryListView(ArrayList<Action> actions){
         this.getItems().clear();
         for (int a = 0; a < actions.size(); a++) {
@@ -19,6 +24,10 @@ public class UndoHistoryListView<String> extends ListView {
         System.out.print("Undo history stack set to" + this.getItems());
     }
 
+    /**
+     * Returns the index of the selected action
+     * @return integer representing the selected action
+     */
     public int getSelectedAction(){
         return this.getSelectionModel().getSelectedIndex();
 

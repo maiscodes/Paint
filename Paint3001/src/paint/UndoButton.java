@@ -8,6 +8,12 @@ import java.util.ArrayList;
 public class UndoButton extends Button {
     private ArrayList<Action> undoList = new ArrayList<>();
 
+    /**
+     * Given a canvas object the undo button is created with a
+     * click event which causes the canvas to run its undoAction
+     * method.
+     * @param canvas PaintCanvas object who's actions will be undone
+     */
     public UndoButton (PaintCanvas canvas) {
         super.setText("Undo");
 
@@ -25,41 +31,11 @@ public class UndoButton extends Button {
                     @Override
                     public void handle(MouseEvent event) {
                         canvas.undoAction();
-                        /*
-                        ArrayList<Action> actions = canvas.getActions();
 
-                        if (actions.size() > 0) {
-                            undoList.add(actions.get(actions.size() - 1));
-                            ArrayList<Action> newActions = new ArrayList<Action>();
-                            for (int a = 0; a< actions.size()-1; a++) {
-                                newActions.add(actions.get(a));
-                            }
-
-                            System.out.println(undoList);
-                            canvas.updateActions(newActions);
-                            canvas.redraw();
-                            undo_stack.updateHistoryListView(newActions);
-                        }
-
-                        //check actions and enable/disable accordingly
-
-                        */
 
                     }
                 });
     }
 
-    /*
-    public ArrayList<Action> getUndoList(){
-        return undoList;
-    }
-
-    public void updateUndoList(ArrayList<Action> newUndoList){
-        undoList.clear();
-        for (int a = 0; a < newUndoList.size(); a++) {
-            undoList.add(newUndoList.get(a));
-        }
-    }
-*/
 }
 
