@@ -12,6 +12,12 @@ public class PaintPolygon extends Shape {
         super(ShapeType.POLYGON);
     }
 
+    /**
+     * Given the graphics context and size of the canvas,
+     * a polygon is drawn onto the graphics context.
+     * @param gc graphics context of the canvas which the polygon will be drawn on
+     * @param px the size in pixels of the canvas
+     */
     public void draw(GraphicsContext gc, double px){
         double[] x_coords = new double[x_coord.size()];
         double[] y_coords = new double[y_coord.size()];
@@ -31,8 +37,13 @@ public class PaintPolygon extends Shape {
 
     }
 
+    /**
+     * Prints the instruction using and x and y coordinate properties
+     * of this shape.
+     * @return string containing instructions with POLYGON key word
+     * and all of the polygon's coordinates in order as they were drawn.
+     */
     public String printInstruction(){
-        // instructions don't print out the original coordinate at the end, will need to reappend when reading from file
         double x;
         double y;
         String instruction = this.shape_type.toString();
@@ -46,6 +57,13 @@ public class PaintPolygon extends Shape {
         return instruction;
     }
 
+    /**
+     * Given new x and y coordinates of the polygon,
+     * set the most recent x and y properties of the polygon
+     * to the given values.
+     * @param x double representing the x coordinate of the last vertex of the polygon
+     * @param y double representing the y coordinate of the last vertex of the polygon
+     */
     public void setLastCoord(double x, double y){
         x_coord.set(x_coord.size() - 1, checkXY(x));
         y_coord.set(y_coord.size() - 1, checkXY(y));

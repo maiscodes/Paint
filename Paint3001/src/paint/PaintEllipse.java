@@ -8,6 +8,12 @@ public class PaintEllipse extends Shape {
         super(ShapeType.ELLIPSE);
     }
 
+    /**
+     * Given the graphics context and size of the canvas,
+     * an ellipse is drawn onto the graphics context.
+     * @param gc graphics context of the canvas which the ellipse will be drawn on
+     * @param px double representing the size of the canvas in pixels
+     */
     public void draw(GraphicsContext gc, double px){
         double x, y, w, h;
 
@@ -27,7 +33,7 @@ public class PaintEllipse extends Shape {
             y = y_coord.get(0);
             h = Math.abs(y_coord.get(1) - y);
         }
-        //gc.fillRect(x, y, w, h); nope this line of code doesnt work if trans
+
         if (gc.getFill() == Color.TRANSPARENT) {
             gc.strokeOval(x*px, y*px, w*px, h*px);
 
@@ -38,6 +44,12 @@ public class PaintEllipse extends Shape {
         }
     };
 
+    /**
+     * Prints the instruction using and x and y coordinate properties
+     * of this shape.
+     * @return string containing instructions with ELLIPSE key word
+     * and two of the ellipse's coordinates from top-left to bottom-right.
+     */
     public String printInstruction(){
         Double X1 = Double.valueOf(x_coord.get(0));
         Double X2 = Double.valueOf(x_coord.get(1));
