@@ -30,7 +30,7 @@ public abstract class Shape extends Action{
     /**
      * Returns ArrayList of X-coordinates of the shape in vector format
      *
-     * @return ArrayList<Double>
+     * @return Double ArrayList
      */
     public ArrayList<Double> getXCoords(){
         return x_coord;
@@ -39,7 +39,7 @@ public abstract class Shape extends Action{
     /**
      * Returns ArrayList of Y-coordinates of the shape in vector format
      *
-     * @return ArrayList<Double>
+     * @return Double ArrayList
      */
     public ArrayList<Double> getYCoords(){
         return y_coord;
