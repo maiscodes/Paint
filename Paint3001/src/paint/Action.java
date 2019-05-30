@@ -7,7 +7,7 @@ public abstract class Action {
 
     }
 
-    public abstract void draw(GraphicsContext gc);
+    public abstract void draw(GraphicsContext gc, double px);
 
     public abstract String printInstruction();
 }

@@ -9,7 +9,13 @@ public class PaintRectangle extends Shape {
         super(ShapeType.RECTANGLE);
     }
 
-    public void draw(GraphicsContext gc){
+    /**
+     * Given the graphics context and size of the canvas,
+     *  a rectangle is drawn onto the graphics context.
+     * @param gc graphics context of the canvas which the rectangle will be drawn on
+     * @param px the size in pixels of the canvas
+     */
+    public void draw(GraphicsContext gc, double px){
         double x, y, w, h;
 
         if(x_coord.get(1) < x_coord.get(0)){
@@ -29,22 +35,29 @@ public class PaintRectangle extends Shape {
             h = Math.abs(y_coord.get(1) - y);
         }
 
-        //gc.fillRect(x, y, w, h); nope this line of code doesnt work if trans
         if (gc.getFill() == Color.TRANSPARENT) {
-            gc.strokeRect(x, y, w, h);
+            gc.strokeRect(x * px, y * px, w * px, h * px);
+
         }
         else {
-            gc.fillRect(x, y, w, h);
-            gc.strokeRect(x, y, w, h);
+            gc.fillRect(x * px, y * px, w * px, h * px);
+            gc.strokeRect(x * px, y * px, w * px, h * px);
         }
-        //gc.strokeLine(x_coord.get(0), y_coord.get(0), x_coord.get(1), y_coord.get(1));
+
+        System.out.println(printInstruction());
     };
 
+    /**
+     * Prints the instruction using and x and y coordinate properties
+     * of this shape.
+     * @return string containing instructions with RECTANGLE key word
+     * and two of the rectangle's coordinates from top-left to bottom-right.
+     */
     public String printInstruction(){
-        Double X1 = Double.valueOf(x_coord.get(0))/canvas_px;
-        Double X2 = Double.valueOf(x_coord.get(1))/canvas_px;
-        Double Y1 =  Double.valueOf(y_coord.get(0))/canvas_px;
-        Double Y2 =  Double.valueOf(y_coord.get(1))/canvas_px;
+        Double X1 = Double.valueOf(x_coord.get(0));
+        Double X2 = Double.valueOf(x_coord.get(1));
+        Double Y1 =  Double.valueOf(y_coord.get(0));
+        Double Y2 =  Double.valueOf(y_coord.get(1));
         String instruction = String.format("RECTANGLE %.2f %.2f %.2f %.2f",X1, Y1, X2, Y2);
         System.out.println(instruction);
         return instruction;

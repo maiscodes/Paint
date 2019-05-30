@@ -1,6 +1,8 @@
-package paint;
+package Tests;
 import javafx.scene.canvas.Canvas;
 import org.junit.jupiter.api.*;
+import paint.*;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -9,8 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReadTest {
     PaintCanvas canvas;
     UndoHistoryListView<String> undo_stack;
-    String testVEC = "RECTANGLE 0.02 0.02 0.08 0.08RECTANGLE 0.03 0.03 0.09 0.09FILL #FFFFFFRECTANGLE 0.12 0.02 0.18 0.08RECTANGLE 0.13 0.03 0.19 0.09";
-
+    String testVEC = "RECTANGLE 0.10 0.10 0.40 0.40RECTANGLE 0.15 0.15 0.45 0.45FILL #FFFFFFRECTANGLE 0.60 0.10 0.90 0.40RECTANGLE 0.65 0.15 0.95 0.45";
     @BeforeEach
     public void setUpFile(){
         canvas = new PaintCanvas(100, undo_stack);
@@ -30,7 +31,7 @@ class ReadTest {
         String check = "";
 
         for (Action a:actions
-             ) {
+        ) {
             check += a.printInstruction();
         }
 

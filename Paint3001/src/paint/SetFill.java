@@ -5,17 +5,35 @@ import javafx.scene.canvas.GraphicsContext;
 public class SetFill extends Action {
     Color fill_colour;
 
+    /**
+     * Given a colour the fill colour property of
+     * the SetFill action is set to the specified value.
+     * @param colour colour object
+     */
     public SetFill(Color colour) {
         fill_colour = colour;
     }
 
-    public void draw(GraphicsContext gc) {
+    /**
+     * Given the graphics context and the size of the canvas
+     * the setFill action will directly affect, the fill colour
+     * property of the graphics context is set to the current value
+     * of this object.
+     * @param gc graphics context of canvas
+     * @param px double representing canvas size in pixels
+     */
+    public void draw(GraphicsContext gc, double px) {
         gc.setFill(fill_colour);
     }
 
+    /**
+     * Prints the instruction of the Set Fill action.
+     * @return string containing instructions with FILL key word
+     * and the corresponding RGB colour value.
+     */
     public String printInstruction(){
         String instruction;
-        if (fill_colour == Color.TRANSPARENT) {
+        if (fill_colour.getOpacity() == 0) {
             instruction = "FILL OFF";
         }
         else {

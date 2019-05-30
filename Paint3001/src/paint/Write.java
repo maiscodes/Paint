@@ -6,11 +6,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Write {
+    /**
+     * Given a PaintCanvas and File a .vec file will be made with instructions
+     * from the given PaintCanvas and output to given File path
+     *
+     * @param canvas a PaintCanvas to take instructions from
+     * @param file a File with path to write to
+     */
     public static void write(PaintCanvas canvas, File file){
         BufferedWriter bw = null;
-        try {/* This logic will make sure that the file
-             * gets created if it is not present at the
-             * specified location*/
+        try {
+            if(!file.getPath().toUpperCase().endsWith(".VEC")){
+                file = new File(file.getPath() + ".VEC");
+            }
             if (!file.exists()) {
                 file.createNewFile();
             }
@@ -32,7 +40,8 @@ public class Write {
             try{
                 if(bw!=null)
                     bw.close();
-            }catch(Exception ex){
+            }
+            catch(Exception ex){
                 System.out.println("Error in closing the BufferedWriter"+ex);
             }
         }
