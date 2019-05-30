@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+/**
+ * Extends Shape to draw a line on to the graphics context of the canvas
+ */
 public class PaintLine extends Shape {
 
     public PaintLine(){

@@ -3,6 +3,9 @@ package paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+/**
+ * Extends Shape to draw a rectangle on to the graphics context of the canvas
+ */
 public class PaintRectangle extends Shape {
 
     public PaintRectangle(){

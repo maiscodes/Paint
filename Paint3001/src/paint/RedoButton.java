@@ -5,6 +5,9 @@ import javafx.scene.input.MouseEvent;
 
 import java.util.ArrayList;
 
+/**
+ * Extends Button to redo an action on the canvas upon click
+ */
 public class RedoButton extends Button {
     private ArrayList<Action> undoList = new ArrayList<>();
 

@@ -4,6 +4,9 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import java.util.ArrayList;
 
+/**
+ * Extends Button to render specified actions on a temp canvas based on the item selected in the undo history list
+ */
 public class ViewActionsButton extends Button {
     /**
      * Given the master canvas, temporary canvas and undo history list
@@ -14,7 +17,7 @@ public class ViewActionsButton extends Button {
      * @param canvas PaintCanvas object representing the master canvas
      * @param tempCanvas PaintCanvas object representing a temporary canvas which will be
      *                   drawn on top of the master canvas
-     * @param undo_stack UndoHistoryListView<String> representing the undo stack which the selection
+     * @param undo_stack UndoHistoryListView(String) representing the undo stack which the selection
      *                   will be made from
      */
     public ViewActionsButton(PaintCanvas canvas, PaintCanvas tempCanvas, UndoHistoryListView<String> undo_stack) {
@@ -22,6 +25,9 @@ public class ViewActionsButton extends Button {
         addEventHandler(MouseEvent.MOUSE_PRESSED,
                 new EventHandler<MouseEvent>() {
 
+                    /**
+                     * @param event
+                     */
                     @Override
                     public void handle(MouseEvent event) {
                         System.out.print("Undo Button Pressed");

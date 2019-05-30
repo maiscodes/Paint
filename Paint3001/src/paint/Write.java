@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Creates a .vec file that is output to the specified file path
+ */
 public class Write {
     /**
      * Given a PaintCanvas and File a .vec file will be made with instructions

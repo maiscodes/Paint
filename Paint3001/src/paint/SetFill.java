@@ -2,6 +2,9 @@ package paint;
 import javafx.scene.paint.Color;
 import javafx.scene.canvas.GraphicsContext;
 
+/**
+ * Extends Action to set the fill colour to the specified colour, and prints the instruction of that action
+ */
 public class SetFill extends Action {
     Color fill_colour;
 

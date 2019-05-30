@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ColorPicker;
 import javafx.event.EventHandler;
 
+/**
+ * Creates a colour picker that allows the user to select a fill colour
+ */
 public class FillColourPicker extends ColorPicker {
 
 

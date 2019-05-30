@@ -8,6 +8,9 @@ import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
+/**
+ * Extends Canvas to create a square-shaped canvas that is resizable, along with a undo stack GUI component that updates
+ */
 
 public class PaintCanvas extends Canvas {
 
@@ -234,7 +237,7 @@ public class PaintCanvas extends Canvas {
 
     /**
      * Sets the shape type of the canvas
-     * @param shapeType
+     * @param shapeType ShapeType
      */
     public void setShapeType(ShapeType shapeType) {
         this.shapeType = shapeType;
@@ -242,7 +245,7 @@ public class PaintCanvas extends Canvas {
 
     /**
      * Returns list of actions of the canvas
-     * @return ArrayList<Action>
+     * @return ArrayList(Action)
      */
     public ArrayList<Action> getActions() {
         return this.actions;

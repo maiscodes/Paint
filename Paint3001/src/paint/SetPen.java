@@ -3,6 +3,9 @@ package paint;
 import javafx.scene.paint.Color;
 import javafx.scene.canvas.GraphicsContext;
 
+/**
+ * Extends Action to set the pen colour to the specified colour, and prints the instruction of that action
+ */
 public class SetPen extends Action {
     Color stroke_colour;
 

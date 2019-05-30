@@ -3,6 +3,9 @@ package paint;
 import javafx.scene.paint.Color;
 import java.io.*;
 
+/**
+ * Reads contents of file path and outputs instructions to Canvas
+ */
 public class Read{
 
     /** Given a PaintCanvas and File, the function will read the contents of the given File path

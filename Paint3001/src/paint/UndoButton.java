@@ -5,6 +5,9 @@ import javafx.scene.input.MouseEvent;
 
 import java.util.ArrayList;
 
+/**
+ * Extends Button to undo an action on the canvas upon click
+ */
 public class UndoButton extends Button {
     private ArrayList<Action> undoList = new ArrayList<>();
 

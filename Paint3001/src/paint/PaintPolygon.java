@@ -6,6 +6,9 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Extends Shape to draw a polygon on to the graphics context of the canvas
+ */
 public class PaintPolygon extends Shape {
 
     public PaintPolygon(){

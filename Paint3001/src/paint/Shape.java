@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+/**
+ * Extends Action to create new shape, gets and checks coordinates of the shape
+ */
 public abstract class Shape extends Action{
     protected ShapeType shape_type;
     //protected Color pen_colour;

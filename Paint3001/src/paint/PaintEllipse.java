@@ -3,6 +3,9 @@ package paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+/**
+ * Extends Shape to draw an ellipse on to the graphics context of the canvas
+ */
 public class PaintEllipse extends Shape {
     public PaintEllipse(){
         super(ShapeType.ELLIPSE);

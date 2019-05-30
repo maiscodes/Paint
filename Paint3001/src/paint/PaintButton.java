@@ -4,7 +4,9 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
-
+/**
+ * Extends Button to create a button that allows the user to choose the drawing tool shape
+ */
 public class PaintButton extends Button {
     /**
      * Given a ShapeType enum and canvas object it creates a button

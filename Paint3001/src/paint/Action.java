@@ -2,6 +2,9 @@ package paint;
 
 import javafx.scene.canvas.GraphicsContext;
 
+/**
+ * Sets graphics context and instruction
+ */
 public abstract class Action {
     Action(){
 

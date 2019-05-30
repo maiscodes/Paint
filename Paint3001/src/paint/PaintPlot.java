@@ -5,7 +5,9 @@ import javafx.scene.paint.Paint;
 import javafx.scene.paint.Color;
 import javafx.scene.image.PixelWriter;
 
-
+/**
+ *  Extends Shape to draw a dot on to the graphics context of the canvas
+ */
 
 public class PaintPlot extends Shape {
 

@@ -20,7 +20,9 @@ import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
 import java.io.InputStream;
 
-
+/**
+ * Sets all GUI components and containers, sets scene, window, event handlers, styles, and option functionality
+ */
 public class GUI {
     private Stage stage;
     private Scene scene;
@@ -71,6 +73,7 @@ public class GUI {
     final FileChooser fileChooser = new FileChooser();
 
 
+
     public GUI () {
         stage = new Stage();
         createUndoStack();
@@ -86,7 +89,7 @@ public class GUI {
         setupScene();
         stage.show();
     }
-
+//Creates a button bar that allows the user to access "menu" functionality
     private void createMenuBar() {
         toolBar = new ToolBar();
         menu_container = new FlowPane();
@@ -139,7 +142,7 @@ public class GUI {
         canvasPane.getChildren().add(tempCanvas);
         canvas.toFront();
     }
-
+//creates drawing tool buttons with image styling, that allows the user to access shape types
     private void createToolButtons(){
         line_btn = new PaintButton(ShapeType.LINE, canvas);
         InputStream input = getClass().getResourceAsStream("line.png");
