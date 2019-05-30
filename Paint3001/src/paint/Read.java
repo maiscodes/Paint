@@ -5,6 +5,14 @@ import java.io.*;
 
 public class Read{
 
+    /** Given a PaintCanvas and File, the function will read the contents of the given File path
+     * and output instructions to the given PaintCanvas
+     *
+     * @param canvas PaintCanvas to output instructions to
+     * @param file File path to read
+     * @throws vecExceptions exception relating to unknown instructions or incorrect file type
+     * @throws IOException exception wherein file does not exist
+     */
     public static void read(PaintCanvas canvas, File file) throws vecExceptions, IOException{
         if (!(file.getPath().toUpperCase().endsWith(".VEC"))) {
             throw new vecExceptions("File not .VEC");
