@@ -301,14 +301,16 @@ public class GUI {
     private void openVECfile(){
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("VEC files", "*.vec"));
         File file = fileChooser.showOpenDialog(stage);
+        GUI newWindow = new GUI();
+
         if (file != null) {
             try{
-                Read.read(canvas, file);
+                Read.read(newWindow.canvas, file);
             } catch (Exception error){
                 error.printStackTrace();
             }
-            canvas.redraw();
-            undo_stack.updateHistoryListView(canvas.getActions());
+            newWindow.canvas.redraw();
+            newWindow.undo_stack.updateHistoryListView(newWindow.canvas.getActions());
         }
 
     }
