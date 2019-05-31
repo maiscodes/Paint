@@ -255,7 +255,7 @@ public class GUI {
         buttonBar2.getStyleClass().setAll("segmented-button-bar-2");
         buttonBar2.getChildren().addAll(line_btn, plot_btn, rect_btn, ellipse_btn, polygon_btn);
         drawingTools.getItems().addAll(buttonBar2);
-        Label drawingtools_lbl = new Label("Drawing Tools");
+        Label drawingtools_lbl = new Label("Colour Palette");
         drawingtoolbar = new VBox();
         ObservableList drawingtoolbar_contents = drawingtoolbar.getChildren();
         drawingtoolbar_contents.addAll(drawingtools_lbl, pencolour_container, shapefill_container, undo_container, view_btn);
