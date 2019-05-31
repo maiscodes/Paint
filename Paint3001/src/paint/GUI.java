@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -98,7 +99,13 @@ public class GUI {
         open_btn = new Button("Open");
         save_btn = new Button("Save");
         new_btn = new Button("New");
-        menu_lbl = new Label("Menu");
+        menu_lbl = new Label("Menu ");
+        InputStream input6 = getClass().getResourceAsStream("menuicon.png");
+        Image image6 = new Image(input6, 20, 20, true, true);
+        ImageView imageView6 = new ImageView(image6);
+        menu_lbl.setGraphic(imageView6);
+        menu_lbl.setFont(new Font("Roboto", 17));
+
         open_btn.getStyleClass().addAll("first");
         new_btn.getStyleClass().addAll("last", "capsule");
         buttonBar.getChildren().addAll(open_btn, save_btn, new_btn);
@@ -110,13 +117,34 @@ public class GUI {
 
     private void createUndoStack() {
         undo_lbl = new Label("Undo History");
+        undo_lbl.setFont(new Font("Roboto", 17));
+        InputStream input8 = getClass().getResourceAsStream("undoicon.png");
+        Image image8 = new Image(input8, 20, 20, true, true);
+        ImageView imageView8 = new ImageView(image8);
+        undo_lbl.setGraphic(imageView8);
+
         undo_stack = new UndoHistoryListView<String>();
     }
 
     private void createUndoButtons(){
         view_btn = new ViewActionsButton(canvas, tempCanvas, undo_stack);
+        InputStream input9 = getClass().getResourceAsStream("hideicon.png");
+        Image image9 = new Image(input9, 25, 25, true, true);
+        ImageView imageView9 = new ImageView(image9);
+        view_btn.setGraphic(imageView9);
+
+
         undo_btn = new UndoButton(canvas);
+        InputStream input10 = getClass().getResourceAsStream("undobutton.png");
+        Image image10 = new Image(input10, 25, 25, true, true);
+        ImageView imageView10 = new ImageView(image10);
+        undo_btn.setGraphic(imageView10);
+
         redo_btn = new RedoButton(canvas);
+        InputStream input11 = getClass().getResourceAsStream("redobutton.png");
+        Image image11 = new Image(input11, 25, 25, true, true);
+        ImageView imageView11 = new ImageView(image11);
+        redo_btn.setGraphic(imageView11);
 
         undo_btn_container = new FlowPane();
         undo_btn_contents = undo_btn_container.getChildren();
@@ -256,6 +284,12 @@ public class GUI {
         buttonBar2.getChildren().addAll(line_btn, plot_btn, rect_btn, ellipse_btn, polygon_btn);
         drawingTools.getItems().addAll(buttonBar2);
         Label drawingtools_lbl = new Label("Colour Palette");
+        drawingtools_lbl.setFont(new Font("Roboto", 17));
+        InputStream input7 = getClass().getResourceAsStream("colouricon.png");
+        Image image7 = new Image(input7, 30, 30, true, true);
+        ImageView imageView7 = new ImageView(image7);
+        drawingtools_lbl.setGraphic(imageView7);
+
         drawingtoolbar = new VBox();
         ObservableList drawingtoolbar_contents = drawingtoolbar.getChildren();
         drawingtoolbar_contents.addAll(drawingtools_lbl, pencolour_container, shapefill_container, undo_container, view_btn);
