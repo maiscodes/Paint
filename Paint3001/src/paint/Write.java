@@ -33,7 +33,6 @@ public class Write {
                 bw.write(instruction.printInstruction());
                 bw.newLine();
             }
-            System.out.println("File written Successfully");
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -45,7 +44,7 @@ public class Write {
                     bw.close();
             }
             catch(Exception ex){
-                System.out.println("Error in closing the BufferedWriter"+ex);
+                System.out.println("Error in closing the BufferedWriter\n"+ex);
             }
         }
     }

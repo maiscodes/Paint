@@ -2,50 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96455c55-23f9-406e-9e5d-27bd24181521" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Paint.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Paint.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/FillColourPicker$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/FillColourPicker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintButton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintCanvas$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintCanvas$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintCanvas$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintEllipse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintLine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintPlot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintPolygon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PaintRectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PenColourPicker$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/PenColourPicker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/SetFill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/SetPen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Paint/paint/ShapeType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/FillColourPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/FillColourPicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PaintButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintEllipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintEllipse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintPlot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintPolygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintPolygon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintRectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PenColourPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PenColourPicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/Read.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Read.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/RedoButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/RedoButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/SetFill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/SetFill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/SetPen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/SetPen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/ShapeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/ShapeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/UndoButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/UndoButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/UndoHistoryListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/UndoHistoryListView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/ViewActionsButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/ViewActionsButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Write.java" afterDir="false" />
@@ -60,22 +27,17 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Paint3001$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1558607639507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
+        <entry file="file://$PROJECT_DIR$/src/paint/vecExceptions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="111" selection-start-line="23" selection-start-column="111" selection-end-line="23" selection-end-column="111" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7088#7089#0" expanded="true" />
-                <element signature="e#7149#7150#0" expanded="true" />
-                <element signature="e#7344#7345#0" expanded="true" />
-                <element signature="e#7405#7406#0" expanded="true" />
-                <element signature="e#8778#8779#0" expanded="true" />
-                <element signature="e#8841#8842#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="42">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -83,98 +45,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/ViewActionsButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="114" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
+            <state relative-caret-position="99">
+              <caret line="32" column="73" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
+        <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
-              <folding>
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-                <element signature="e#2999#3000#0" expanded="true" />
-                <element signature="e#3037#3038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="245" column="7" lean-forward="true" selection-start-line="245" selection-start-column="7" selection-end-line="245" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/RedoButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="8" selection-start-line="8" selection-end-line="9" />
-              <folding>
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/UndoHistoryListView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/UndoButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="414">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -195,6 +79,9 @@
       <find>size</find>
       <find>preffere</find>
       <find>openNewWindow</find>
+      <find>System.out</find>
+      <find>Syste</find>
+      <find>Sys</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,28 +101,28 @@
         <option value="$PROJECT_DIR$/src/paint/FillColourPicker.java" />
         <option value="$PROJECT_DIR$/src/paint/Main.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintButton.java" />
+        <option value="$PROJECT_DIR$/src/paint/PenColourPicker.java" />
+        <option value="$PROJECT_DIR$/src/paint/Read.java" />
+        <option value="$PROJECT_DIR$/src/paint/RedoButton.java" />
+        <option value="$PROJECT_DIR$/src/paint/UndoButton.java" />
+        <option value="$PROJECT_DIR$/src/paint/Action.java" />
+        <option value="$PROJECT_DIR$/src/paint/Shape.java" />
+        <option value="$PROJECT_DIR$/src/paint/GUI.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintCanvas.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintEllipse.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintLine.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintPlot.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintPolygon.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintRectangle.java" />
-        <option value="$PROJECT_DIR$/src/paint/PenColourPicker.java" />
-        <option value="$PROJECT_DIR$/src/paint/Read.java" />
-        <option value="$PROJECT_DIR$/src/paint/RedoButton.java" />
         <option value="$PROJECT_DIR$/src/paint/SetFill.java" />
         <option value="$PROJECT_DIR$/src/paint/SetPen.java" />
-        <option value="$PROJECT_DIR$/src/paint/UndoButton.java" />
+        <option value="$PROJECT_DIR$/src/paint/UndoHistoryListView.java" />
         <option value="$PROJECT_DIR$/src/paint/ViewActionsButton.java" />
         <option value="$PROJECT_DIR$/src/paint/Write.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintCanvas.java" />
-        <option value="$PROJECT_DIR$/src/paint/UndoHistoryListView.java" />
-        <option value="$PROJECT_DIR$/src/paint/GUI.java" />
-        <option value="$PROJECT_DIR$/src/paint/Action.java" />
-        <option value="$PROJECT_DIR$/src/paint/Shape.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1546" />
     <option name="height" value="1178" />
@@ -248,8 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,6 +173,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,6 +182,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559186285562" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
@@ -462,10 +350,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <frame x="0" y="22" width="1546" height="1178" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24879725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24838293" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -474,7 +362,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17437722" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17415215" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,7 +370,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32699275" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32630613" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -569,179 +457,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/vecExceptions.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/square2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="315">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/FillColourPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="247" column="53" selection-start-line="247" selection-start-column="53" selection-end-line="247" selection-end-column="53" />
           <folding>
-            <element signature="e#108#109#0" expanded="true" />
-            <element signature="e#132#133#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="147">
           <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="105">
           <caret line="7" column="90" selection-start-line="7" selection-start-column="90" selection-end-line="7" selection-end-column="90" />
-          <folding>
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-end-line="7" />
-          <folding>
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="250">
+          <caret line="409" selection-start-line="409" selection-end-line="409" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintPolygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="379">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="42" column="86" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintEllipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="60" column="89" selection-start-line="60" selection-start-column="89" selection-end-line="60" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PaintRectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/FillColourPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="624">
+          <caret line="61" column="91" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/PenColourPicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="84">
           <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding>
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/SetPen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding>
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/ShapeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/square2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/RedoButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="8" selection-start-line="8" selection-end-line="9" />
-          <folding>
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/UndoButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/ViewActionsButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="114" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
+        <state relative-caret-position="74">
+          <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Read.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/RedoButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+        <state relative-caret-position="378">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/SetFill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/SetPen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/ShapeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/UndoButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/UndoHistoryListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/vecExceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/ViewActionsButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="32" column="73" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -750,60 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/Write.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="245" column="7" lean-forward="true" selection-start-line="245" selection-start-column="7" selection-end-line="245" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/UndoHistoryListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="111" selection-start-line="23" selection-start-column="111" selection-end-line="23" selection-end-column="111" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7088#7089#0" expanded="true" />
-            <element signature="e#7149#7150#0" expanded="true" />
-            <element signature="e#7344#7345#0" expanded="true" />
-            <element signature="e#7405#7406#0" expanded="true" />
-            <element signature="e#8778#8779#0" expanded="true" />
-            <element signature="e#8841#8842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
-          <folding>
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#2999#3000#0" expanded="true" />
-            <element signature="e#3037#3038#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="414">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -818,7 +647,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -874,7 +702,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>javafx.controls</last-edited>
+          <last-edited>javafx-swt</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

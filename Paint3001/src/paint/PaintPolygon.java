@@ -56,7 +56,7 @@ public class PaintPolygon extends Shape {
             y = Double.valueOf(y_coord.get(p));
             instruction += String.format(" %.2f %.2f", x, y);
         }
-        System.out.println(instruction);
+
         return instruction;
     }
 

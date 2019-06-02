@@ -82,11 +82,8 @@ public class PaintCanvas extends Canvas {
 
                     @Override
                     public void handle(MouseEvent event) {
-                        System.out.println("Current square size is: "+size);
                         double x = event.getX()/size;
                         double y = event.getY()/size;
-
-                        System.out.println("X: " + event.getX() + "\nY: " + event.getY());
 
                         if(shapeType == ShapeType.RECTANGLE){
                             Shape rect = new PaintRectangle();
@@ -123,7 +120,6 @@ public class PaintCanvas extends Canvas {
                             plot.draw(gc, size);
                         }
                         else if(shapeType == ShapeType.POLYGON && !polyEdit){
-                            System.out.println("poly created");
                             Shape polygon = new PaintPolygon();
                             polygon.addXCoord(event.getX()/size);
                             polygon.addYCoord(event.getY()/size);
@@ -135,7 +131,6 @@ public class PaintCanvas extends Canvas {
                             polygon.draw(gc, size);
                         }
                         else if(shapeType == ShapeType.POLYGON && polyEdit){
-                            System.out.println("poly edited");
                             Shape polygon = (Shape) actions.get(actions.size() - 1);
 
                             polygon.addXCoord(event.getX()/size);
@@ -160,7 +155,6 @@ public class PaintCanvas extends Canvas {
                 if(shapeType == ShapeType.POLYGON && polyEdit){
                     PaintPolygon polygon = (PaintPolygon) actions.get(actions.size() - 1);
                     if(polygon.getXCoords().size() > 1) {
-                        System.out.println("poly Live");
                         polygon.setLastCoord(event.getX()/size, event.getY()/size);
                         redraw();
                         polygon.draw(gc, size);
@@ -187,9 +181,6 @@ public class PaintCanvas extends Canvas {
                         if(shapeType == ShapeType.RECTANGLE || shapeType == ShapeType.ELLIPSE || shapeType == ShapeType.LINE){
                             redrawShape(x, y);
                         }
-
-                        System.out.println(event.getX());
-                        System.out.println(event.getY());
 
                         redraw();
                     }
@@ -379,7 +370,6 @@ public class PaintCanvas extends Canvas {
                 newActions.add(actions.get(a));
             }
 
-            System.out.println(undoActions);
             updateActions(newActions);
             redraw();
             undoStacks.updateHistoryListView(newActions);
@@ -418,7 +408,6 @@ public class PaintCanvas extends Canvas {
             }
             newActions.add(undoActions.get(undoActions.size() - 1));
 
-            System.out.println(undoActions);
             updateActions(newActions);
             redraw();
             undoStacks.updateHistoryListView(newActions);
@@ -447,7 +436,6 @@ public class PaintCanvas extends Canvas {
         else {
             size = getHeight();
         }
-        System.out.println("Pixels are " + size);
 
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, size, size);

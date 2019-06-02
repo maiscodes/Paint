@@ -246,15 +246,12 @@ public class GUI {
                     public void handle(KeyEvent t) {
                         if(t.getCode()== KeyCode.ESCAPE){
                             canvas.completePolygon();
-                            System.out.println("Poly done!");
                         }
                         if(t.getCode()== KeyCode.Z){
                             canvas.undoAction();
-                            System.out.println("Action undone!");
                         }
                         if(t.getCode()== KeyCode.Y){
                             canvas.redoAction();
-                            System.out.println("Action redone!");
                         }
                         if(t.getCode()== KeyCode.N){
                             openNewWindow();

@@ -46,8 +46,6 @@ public class PaintRectangle extends Shape {
             gc.fillRect(x * px, y * px, w * px, h * px);
             gc.strokeRect(x * px, y * px, w * px, h * px);
         }
-
-        System.out.println(printInstruction());
     };
 
     /**
@@ -62,7 +60,6 @@ public class PaintRectangle extends Shape {
         Double Y1 =  Double.valueOf(y_coord.get(0));
         Double Y2 =  Double.valueOf(y_coord.get(1));
         String instruction = String.format("RECTANGLE %.2f %.2f %.2f %.2f",X1, Y1, X2, Y2);
-        System.out.println(instruction);
         return instruction;
     }
 }

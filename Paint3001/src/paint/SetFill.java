@@ -45,7 +45,6 @@ public class SetFill extends Action {
                     (int)( fill_colour.getBlue() * 255 ) );
 
         }
-        System.out.println(instruction);
 
         return instruction;
 

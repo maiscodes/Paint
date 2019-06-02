@@ -25,7 +25,6 @@ public class UndoHistoryListView<String> extends ListView {
         for (int a = 0; a < actions.size(); a++) {
             this.getItems().add(actions.get(a).printInstruction());
         }
-        System.out.print("Undo history stack set to" + this.getItems());
     }
 
     /**

@@ -30,9 +30,7 @@ public class ViewActionsButton extends Button {
                      */
                     @Override
                     public void handle(MouseEvent event) {
-                        System.out.print("Undo Button Pressed");
                         int actionIndex = undo_stack.getSelectedAction();
-                        System.out.print(actionIndex);
                         ArrayList<Action> actions = canvas.getActions();
                         ArrayList<Action> newActions = new ArrayList<Action>();
 

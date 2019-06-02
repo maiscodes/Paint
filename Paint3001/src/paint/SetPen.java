@@ -39,7 +39,6 @@ public class SetPen extends Action {
         String instruction = String.format("PEN #%02X%02X%02X",(int)( stroke_colour.getRed() * 255 ),
                 (int)( stroke_colour.getGreen() * 255 ),
                 (int)( stroke_colour.getBlue() * 255 ) );
-        System.out.println(instruction);
         return instruction;
     }
 }
